@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url('imgfolder/background4.jpg');
+  background-image: url('background4.jpg');
   background-size: cover;
   color: white;
   font-family: 'Red Serif', serif;
@@ -180,3 +180,4 @@ body {
     display: block;
   }
 }
+
