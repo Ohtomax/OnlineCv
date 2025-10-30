@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Skills</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 </head>
 <body>
     
+    <header class="header-class">
+        <div class="header-name-section">
+            <img data-aos="fade-down" data-aos-duration="1500"src="logo.png" class="circle-image">
+            <h2 data-aos="fade-down" data-aos-duration="2000">WESLY</h2>
+        </div>
+        <div class="header-menu-section">
+            <a data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000" href="index.html">Home</a>
+            <a data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000" href="about.html">About</a>
+            <a data-aos="fade-down" data-aos-delay="400" data-aos-duration="1000">Skills</a>
+            <a data-aos="fade-down" data-aos-delay="600" data-aos-duration="1000">Education</a>
+            <a data-aos="fade-down" data-aos-delay="800" data-aos-duration="1000">Work</a>
+            <a data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">Experience</a>
+            <a data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1000">Contact</a>
+        </div>
+        <div data-aos="fade-down" data-aos-duration="2000" class="dropdown">
+            <button 
+                class="btn dropdown-toggle custom-btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+            </button>
+        <ul class="dropdown-menu custom-dropdown" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="index.html">Home</a></li>
+            <li><a class="dropdown-item" href="about.html">About</a></li>
+            <li><a class="dropdown-item" href="#">Skills</a></li>
+            <li><a class="dropdown-item" href="#">Education</a></li>
+            <li><a class="dropdown-item" href="#">Work</a></li>
+            <li><a class="dropdown-item" href="#">Experience</a></li>
+            <li><a class="dropdown-item" href="#">Contact</a></li>
+        </ul>
+        </div>
+    </header>
+
+
+    <section>
+        <div class="flex flex-col w-[100%] items-center pt-[20px] px-[30px]">
+            <h1 class="text-[50px] font-bold z-2 relative" style="text-shadow: 5px 5px 5px rgb(158, 0, 0);" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                My Skills
+            </h1>
+
+            <h1 class="text-[110px] font-bold opacity-15 text-#808080 z-1 absolute">
+                Skills
+            </h1>
+
+            <h1 class="text-center pt-[20px] !opacity-87 text-[20px] z-2 sm:px-[50px] md:px-[100px] lg:px-[150px] xl:px-[250px] 2xl:px-[350px]">
+                The Skills section highlights the technical abilities and tools I use to build and maintain responsive, user-friendly websites — including proficiency in front-end and back-end technologies, frameworks, and development best practices.
+            </h1>
+        </div>
+    </section>
+
+    <section class="mt-[30px]">
+        <div class="w-[100%] flex flex-col md:flex-row px-[20px] sm:px-[30px] md:px-[45px] lg:px-[70px] xl:px-[120px] 2xl:px-[200px]">
+            <div class="w-[100%] py-[10px] px-[20PX]">
+                <h1 class=" flex justify-between" style="letter-spacing: 2px;">
+                    HTML
+                    <span>90%</span>
+                </h1>
+                <div class="flex flex-row justify-center items-center gap-[10px] pt-[10px]">
+                     <div class="items-center justify-center">
+                        <svg class="w-[auto] h-[25px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/></svg>
+                     </div>
+
+                    <div class="flex-1 w-[100%] bg-[#474747] rounded-full h-[25px] mt-[7px] ">
+                        <div class="flex-1 h-full bg-[#940303] rounded-full w-[90%] glow-animate">
+                        </div>   
+                    </div>
+
+                </div>
+            </div>
+            <div class="w-[100%] py-[10px] px-[20PX]">
+                <h1 class=" flex justify-between" style="letter-spacing: 2px;">
+                    HTML
+                    <span>90%</span>
+                </h1>
+                <div class="w-[100%] bg-[#474747] rounded-full h-[15px] mt-[7px] ">
+
+                    <div class="h-full bg-[#940303] rounded-full w-[90%] glow-animate">
+
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="w-[100%] flex flex-col md:flex-row px-[20px] sm:px-[30px] md:px-[45px] lg:px-[70px] xl:px-[120px] 2xl:px-[200px]">
+            <div class="w-[100%] py-[20px] px-[20PX]">
+                <h1 class=" flex justify-between" style="letter-spacing: 2px;">
+                    HTML
+                    <span>90%</span>
+                </h1>
+                <div class="w-[100%] bg-[#474747] rounded-full h-[15px] mt-[7px] ">
+
+                    <div class="h-full bg-[#940303] rounded-full w-[90%] glow-animate">
+
+                    </div>   
+                </div>
+            </div>
+            <div class="w-[100%] py-[20px] px-[20PX]">
+                <h1 class=" flex justify-between" style="letter-spacing: 2px;">
+                    HTML
+                    <span>90%</span>
+                </h1>
+                <div class="w-[100%] bg-[#474747] rounded-full h-[15px] mt-[7px] ">
+
+                    <div class="h-full bg-[#940303] rounded-full w-[90%] glow-animate">
+
+                    </div>   
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        document.getElementById("downloadBtn").addEventListener("click", function() {
+            const link = document.createElement("a");
+            link.href = "resume.docx.pdf";  
+            link.download = "MyCV.pdf";      
+            link.click();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>

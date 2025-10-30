@@ -155,7 +155,7 @@ body {
   border-radius: 10px;
 }
 
-/* ===== RESPONSIVENESS ===== */
+
 @media (max-width: 991px) {
   .header-name-section {
     padding-left: 30px;
