@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="about.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <header class="header-class">
+            <div class="header-name-section">
+                <img data-aos="fade-down" data-aos-duration="1500"src="logo.png" class="circle-image">
+                <h2 data-aos="fade-down" data-aos-duration="2000">WESLY</h2>
+            </div>
+            <div class="header-menu-section">
+                <a data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000" href="index.html">Home</a>
+                <a data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000" href="about.html">About</a>
+                <a data-aos="fade-down" data-aos-delay="400" data-aos-duration="1000" href="skills.html">Skills</a>
+                <a data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000" href="Experience.html">Experience</a>
+                <a data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1000">Contact</a>
+            </div>
+            <div data-aos="fade-down" data-aos-duration="2000" class="dropdown">
+                <button 
+                    class="btn dropdown-toggle custom-btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </button>
+            <ul class="dropdown-menu custom-dropdown" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+                <li><a class="dropdown-item" href="skills.html">Skills</a></li>
+                <li><a class="dropdown-item" href="Experience.html">Experience</a></li>
+                <li><a class="dropdown-item" href="#">Contact</a></li>
+            </ul>
+            </div>
+    </header>
+  
+    <section class="py-16">
+        <div class="w-full px-5 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 max-w-7xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                Experience
+            </h1>
+            
+            <div class="relative">
+                
+                <!-- Experience card -->
+                <div class="ml-8 mb-12 group">                   
+                    <!-- Content card -->
+                    <div class="bg-gray-800 rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 border border-gray-700 hover:border-yellow-400/50">
+                        <div class="flex flex-col gap-3">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white">
+                                Bachelor's Degree
+                            </h2>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <span class="text-sm font-medium">2023 - 2027</span>
+                            </div>
+                            <p class="text-gray-300 mt-2 leading-relaxed">
+                                Currently pursuing undergraduate studies with focus on developing technical and analytical skills.
+                            </p>
+                            
+                            <!-- Optional: Add skills or highlights -->
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-xs font-semibold">In Progress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        document.getElementById("downloadBtn").addEventListener("click", function() {
+            const link = document.createElement("a");
+            link.href = "resume.docx.pdf";  
+            link.download = "MyCV.pdf";      
+            link.click();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
