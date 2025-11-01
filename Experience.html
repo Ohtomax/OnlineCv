@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="icon" type="image/png" href="logo.png">
 </head>
-<body>
+<body class="overflow-x-hidden">  
     <header class="header-class">
             <div class="header-name-section">
                 <img data-aos="fade-down" data-aos-duration="1500"src="logo.png" class="circle-image">
@@ -38,35 +38,107 @@
             </div>
     </header>
   
-    <section class="py-16">
-        <div class="w-full px-5 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 max-w-7xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+    <section class="py-[20px]">
+        <div class="w-full px-[30px] sm:px-[60px] md:px-[120px] lg:px-[200px] xl:px-[250px] 2xl:px-[300px] mx-auto">
+            <h1 class="text-[50px] font-bold text-center pb-[50px]" style="text-shadow: 5px 5px 5px rgb(158, 0, 0);" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                 Experience
             </h1>
-            
-            <div class="relative">
-                
-                <!-- Experience card -->
-                <div class="ml-8 mb-12 group">                   
-                    <!-- Content card -->
-                    <div class="bg-gray-800 rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 border border-gray-700 hover:border-yellow-400/50">
+            <div class="relative" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                <div class="mb-12 group">                   
+                    <div class="bg-[#222] rounded-2xl p-6 shadow-xl button-85">
                         <div class="flex flex-col gap-3">
-                            <h2 class="text-2xl md:text-3xl font-bold text-white">
-                                Bachelor's Degree
+                            <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Bachelor of Science in Computer Science
                             </h2>
                             <div class="flex items-center gap-2 text-gray-400">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                                 </svg>
-                                <span class="text-sm font-medium">2023 - 2027</span>
+                                <span class="text-sm font-medium">2023 - 2027 at City College of Angeles</span>
                             </div>
-                            <p class="text-gray-300 mt-2 leading-relaxed">
-                                Currently pursuing undergraduate studies with focus on developing technical and analytical skills.
+                            <p class="text-gray-300 leading-relaxed">
+                                I am currently pursuing my undergraduate studies with a focus on developing strong technical and analytical skills, particularly in web development. Alongside my studies, I actively work on personal projects to enhance my growth and practical experience. I also take on paid projects from both my own and other institutions to further apply and refine my skills in real-world settings.
                             </p>
                             
-                            <!-- Optional: Add skills or highlights -->
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-xs font-semibold">In Progress</span>
+                            <h2 class="text-[20px] font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Certifications
+                            </h2>
+                            <div class="flex flex-row gap-[10px] items-center pl-[15px]">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <h1 class="font-bold">Cisco Certicate <span class="font-medium">( IT Essentials: PC Hardware and Software )</span> - <span class="text-sm font-medium opacity-70">January 03, 2024</span></h1>
+                                <button class="text-[15px] rounded-[5px] bg-[#333] px-[7px] py-[3px]" id="viewciscocert">View my certificate here</button>
+                            </div>
+                            <div class="flex flex-row gap-[10px] items-center pl-[15px]">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <h1 class="font-bold">Cisco Certicate <span class="font-medium">( CCNAv7: Introduction to Networks )</span> - <span class="text-sm font-medium opacity-70">Febuary 05, 2024</span></h1>
+                                <button class="text-[15px] rounded-[5px] bg-[#333] px-[7px] py-[3px]" id="viewciscocert2">View my certificate here</button>
+                            </div>
+                            <div class="flex flex-row gap-[10px] items-center pl-[15px]">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <h1 class="font-bold">The Linux Foundation certificate- <span class="font-medium">( Cybersecurity Essentials LFC108 ) - </span><span class="text-sm font-medium opacity-70">October 31, 2025</span></h1>
+                                <button class="text-[15px] rounded-[5px] bg-[#333] px-[7px] py-[3px]" id="viewcyberseccert">View my certificate here</button>
+                            </div> 
+                            <h2 class="text-[20px] font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Projects
+                            </h2>
+                            <div class="flex flex-row gap-[10px] items-center pl-[15px]">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <h1 class="font-bold">FitJourneySync - <span class="font-medium">( Created using Java for android development ) - </span><span class="text-sm font-medium opacity-70">December 2024</span></h1>
+                                <button class="text-[15px] rounded-[5px] bg-[#333] px-[7px] py-[3px]" id="viewappdev">View my Project here</button>
+                            </div>
+                            <div class="flex flex-row gap-[10px] items-center pl-[15px]">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <h1 class="font-bold">WEB-Based E-commerce School Project - <span class="font-medium">( Front-end web developer for User end (HTML, CSS, Javascript & Bootstrap) ) - </span><span class="text-sm font-medium opacity-70">April 2025</span></h1>
+                                <button class="text-[15px] rounded-[5px] bg-[#333] px-[7px] py-[3px]" id="viewecom">View our Project here</button>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-[#333] text-yellow-400 px-4 py-2 rounded-full text-xs font-semibold">In Progress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                <div class="mb-12 group">                   
+                    <div class="bg-[#222] rounded-2xl p-6 shadow-xl button-85">
+                        <div class="flex flex-col gap-3">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Language Assessor 
+                            </h2>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <span class="text-sm font-medium">June - August 2025 at Gngn Eikaiwa Phils</span>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed">
+                                I worked at GNGN Eikawa for three months as a full-time, project-based worker. During my time there, I was responsible for evaluating students from various countries on their language skills. This role allowed me to assess proficiency levels and provide feedback to support their language learning progress.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-[#333] text-yellow-400 px-4 py-2 rounded-full text-xs font-semibold">Finished</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                <div class="mb-12 group">                   
+                    <div class="bg-[#222] rounded-2xl p-6 shadow-xl button-85">
+                        <div class="flex flex-col gap-3">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Cashier & Fitness Instructor
+                            </h2>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <span class="text-sm font-medium">October 2023 - Present at Vibes Fitness Gym</span>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed">
+                                I am currently working as a part-time cashier and a freelance fitness coach at Vibes Fitness Gym. These roles allow me to improve my socialization, communication, and leadership skills while balancing my academic and professional responsibilities. Through these experiences, I continue to grow both personally and professionally.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-[#333] text-yellow-400 px-4 py-2 rounded-full text-xs font-semibold">Current Part-time work</span>
                             </div>
                         </div>
                     </div>
@@ -81,11 +153,36 @@
     </script>
 
     <script>
-        document.getElementById("downloadBtn").addEventListener("click", function() {
+        document.getElementById("viewciscocert").addEventListener("click", function() {
             const link = document.createElement("a");
-            link.href = "resume.docx.pdf";  
-            link.download = "MyCV.pdf";      
+            link.href = "ciscocert.pdf";  
+            link.view = "Myciscocert.pdf";
+            link.target = "_blank"    
             link.click();
+        });
+
+        document.getElementById("viewciscocert2").addEventListener("click", function() {
+            const link = document.createElement("a");
+            link.href = "net1cert.pdf";  
+            link.view = "Myciscocert.pdf";
+            link.target = "_blank"    
+            link.click();
+        });
+
+        document.getElementById("viewcyberseccert").addEventListener("click", function(){
+            const link = document.createElement("a");
+            link.href = "cyberseccert.pdf";  
+            link.view = "Mycyberseccert.pdf"; 
+            link.target = "_blank"      
+            link.click();
+        });
+
+        document.getElementById("viewappdev").addEventListener("click", function(){
+            window.open("https://github.com/Ohtomax/FITJOURNEYSYNCFINAL.git", "_blank");
+        });
+
+        document.getElementById("viewecom").addEventListener("click", function(){
+            window.open("https://github.com/TrustTheGuardian/Web-based-E-commerce-platform-for-Purrfectly-Stitched-.git", "_blank");
         });
     </script>
 
