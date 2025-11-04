@@ -75,9 +75,15 @@
                             </div>
                             <div class="flex flex-row gap-[10px] items-center pl-[15px]">
                                 <div class="w-2 h-2 bg-white rounded-full"></div>
+                                <h1 class="font-bold">Servo certificate- <span class="font-medium">( Privacy by Design: Compliance & Privacy in Software Developmen ) - </span><span class="text-sm font-medium opacity-70">October 15, 2025</span></h1>
+                                <button class="text-[15px] rounded-[5px] bg-[#333] px-[7px] py-[3px]" id="viewdataprivacy">View my certificate here</button>
+                            </div>
+                            <div class="flex flex-row gap-[10px] items-center pl-[15px]">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
                                 <h1 class="font-bold">The Linux Foundation certificate- <span class="font-medium">( Cybersecurity Essentials LFC108 ) - </span><span class="text-sm font-medium opacity-70">October 31, 2025</span></h1>
                                 <button class="text-[15px] rounded-[5px] bg-[#333] px-[7px] py-[3px]" id="viewcyberseccert">View my certificate here</button>
                             </div> 
+                            
                             <h2 class="text-[20px] font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
                                 Projects
                             </h2>
@@ -183,6 +189,14 @@
 
         document.getElementById("viewecom").addEventListener("click", function(){
             window.open("https://github.com/TrustTheGuardian/Web-based-E-commerce-platform-for-Purrfectly-Stitched-.git", "_blank");
+        });
+
+        document.getElementById("viewdataprivacy").addEventListener("click", function(){
+            const link = document.createElement("a");
+            link.href = "dataprivacy.pdf";  
+            link.view = "Mydataprivacycert.pdf"; 
+            link.target = "_blank"      
+            link.click();
         });
     </script>
 
