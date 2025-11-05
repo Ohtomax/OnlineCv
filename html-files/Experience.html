@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../cssfiles/about.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/png" href="../cssfiles/images/logo.png">
 </head>
 <body class="overflow-x-hidden">  
     <header class="header-class">
             <div class="header-name-section">
-                <img data-aos="fade-down" data-aos-duration="1500"src="logo.png" class="circle-image">
+                <img data-aos="fade-down" data-aos-duration="1500" src="../cssfiles/images/logo.png" class="circle-image">
                 <h2 data-aos="fade-down" data-aos-duration="2000">WESLY</h2>
             </div>
             <div class="header-menu-section">
-                <a data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000" href="index.html">Home</a>
+                <a data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000" href="../index.html">Home</a>
                 <a data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000" href="about.html">About</a>
                 <a data-aos="fade-down" data-aos-delay="400" data-aos-duration="1000" href="skills.html">Skills</a>
-                <a data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000" href="Experience.html">Experience</a>
-                <a data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1000">Contact</a>
+                <a data-aos="fade-down" data-aos-delay="1000" href="Experience.html" data-aos-duration="1000">Experience</a>
+                <a data-aos="fade-down" data-aos-delay="1200" href="contact.html" data-aos-duration="1000">Contact</a>
             </div>
             <div data-aos="fade-down" data-aos-duration="2000" class="dropdown">
                 <button 
@@ -29,11 +29,11 @@
                     Menu
                 </button>
             <ul class="dropdown-menu custom-dropdown" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="../index.html">Home</a></li>
                 <li><a class="dropdown-item" href="about.html">About</a></li>
                 <li><a class="dropdown-item" href="skills.html">Skills</a></li>
-                <li><a class="dropdown-item" href="Experience.html">Experience</a></li>
-                <li><a class="dropdown-item" href="#">Contact</a></li>
+                <li><a class="dropdown-item" href="Experience.html" >Experience</a></li>
+                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
             </ul>
             </div>
     </header>
@@ -161,7 +161,7 @@
     <script>
         document.getElementById("viewciscocert").addEventListener("click", function() {
             const link = document.createElement("a");
-            link.href = "ciscocert.pdf";  
+            link.href = "../certfolder/ciscocert.pdf";  
             link.view = "Myciscocert.pdf";
             link.target = "_blank"    
             link.click();
@@ -169,7 +169,7 @@
 
         document.getElementById("viewciscocert2").addEventListener("click", function() {
             const link = document.createElement("a");
-            link.href = "net1cert.pdf";  
+            link.href = "../certfolder/net1cert.pdf";  
             link.view = "Myciscocert.pdf";
             link.target = "_blank"    
             link.click();
@@ -177,7 +177,7 @@
 
         document.getElementById("viewcyberseccert").addEventListener("click", function(){
             const link = document.createElement("a");
-            link.href = "cyberseccert.pdf";  
+            link.href = "../certfolder/cyberseccert.pdf";  
             link.view = "Mycyberseccert.pdf"; 
             link.target = "_blank"      
             link.click();
@@ -193,7 +193,7 @@
 
         document.getElementById("viewdataprivacy").addEventListener("click", function(){
             const link = document.createElement("a");
-            link.href = "dataprivacy.pdf";  
+            link.href = "../certfolder/dataprivacy.pdf";  
             link.view = "Mydataprivacycert.pdf"; 
             link.target = "_blank"      
             link.click();
