@@ -57,13 +57,16 @@
 <section>
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 px-[30px] md:px-[120px] xl:px-[200px]">
         
-        <div class="" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+<div class="" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
             <div class="h-full">                  
                 <div class="bg-[#222] rounded-2xl p-6 shadow-xl button-85 h-full">
                     <div class="flex flex-col gap-3 h-full min-h-[300px]">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
-                            Practice Task 1
-                        </h2>
+                        <div class="flex flex-row justify-between">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Practice Task 1
+                            </h2>
+                            <span class="bg-[#333] text-yellow-400 px-[20px] sm:px-4 py-[10px] rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                        </div>
                         <div class="flex items-center gap-2 text-gray-400">
                             <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -74,9 +77,14 @@
                             This demo file shows how to prepare and clean data before using it for analysis. It includes simple steps to organize the data, fix errors, and remove unnecessary information so the data becomes accurate and ready to use.
                         </p>
                         <div class="mt-auto flex flex-row flex-nowrap gap-1 sm:gap-2 justify-between sm:justify-end items-center w-full">
-                            <span class="bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewPracTask1">View PDF</span>
-                            <span class="bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelPracTask1">View Excel</span>
-                            <span class="bg-[#333] text-yellow-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                            <span class="h-[35px] flex flex-row bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap items-center gap-[6px]" id="viewPracTask1">
+                                View PDF
+                                <svg height="15px" width="15px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 309.267 309.267" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#E2574C;" d="M38.658,0h164.23l87.049,86.711v203.227c0,10.679-8.659,19.329-19.329,19.329H38.658 c-10.67,0-19.329-8.65-19.329-19.329V19.329C19.329,8.65,27.989,0,38.658,0z"></path> <path style="fill:#B53629;" d="M289.658,86.981h-67.372c-10.67,0-19.329-8.659-19.329-19.329V0.193L289.658,86.981z"></path> <path style="fill:#FFFFFF;" d="M217.434,146.544c3.238,0,4.823-2.822,4.823-5.557c0-2.832-1.653-5.567-4.823-5.567h-18.44 c-3.605,0-5.615,2.986-5.615,6.282v45.317c0,4.04,2.3,6.282,5.412,6.282c3.093,0,5.403-2.242,5.403-6.282v-12.438h11.153 c3.46,0,5.19-2.832,5.19-5.644c0-2.754-1.73-5.49-5.19-5.49h-11.153v-16.903C204.194,146.544,217.434,146.544,217.434,146.544z M155.107,135.42h-13.492c-3.663,0-6.263,2.513-6.263,6.243v45.395c0,4.629,3.74,6.079,6.417,6.079h14.159 c16.758,0,27.824-11.027,27.824-28.047C183.743,147.095,173.325,135.42,155.107,135.42z M155.755,181.946h-8.225v-35.334h7.413 c11.221,0,16.101,7.529,16.101,17.918C171.044,174.253,166.25,181.946,155.755,181.946z M106.33,135.42H92.964 c-3.779,0-5.886,2.493-5.886,6.282v45.317c0,4.04,2.416,6.282,5.663,6.282s5.663-2.242,5.663-6.282v-13.231h8.379 c10.341,0,18.875-7.326,18.875-19.107C125.659,143.152,117.425,135.42,106.33,135.42z M106.108,163.158h-7.703v-17.097h7.703 c4.755,0,7.78,3.711,7.78,8.553C113.878,159.447,110.863,163.158,106.108,163.158z"></path> </g> </g></svg>
+                            </span>
+                            <span class="h-[35px] flex flex-row gap-[7px] items-center bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelPracTask1">
+                                View Excel
+                                <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><linearGradient id="a" x1="4.494" y1="-2092.086" x2="13.832" y2="-2075.914" gradientTransform="translate(0 2100)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#18884f"></stop><stop offset="0.5" stop-color="#117e43"></stop><stop offset="1" stop-color="#0b6631"></stop></linearGradient></defs><title>file_type_excel</title><path d="M19.581,15.35,8.512,13.4V27.809A1.192,1.192,0,0,0,9.705,29h19.1A1.192,1.192,0,0,0,30,27.809h0V22.5Z" style="fill:#185c37"></path><path d="M19.581,3H9.705A1.192,1.192,0,0,0,8.512,4.191h0V9.5L19.581,16l5.861,1.95L30,16V9.5Z" style="fill:#21a366"></path><path d="M8.512,9.5H19.581V16H8.512Z" style="fill:#107c41"></path><path d="M16.434,8.2H8.512V24.45h7.922a1.2,1.2,0,0,0,1.194-1.191V9.391A1.2,1.2,0,0,0,16.434,8.2Z" style="opacity:0.10000000149011612;isolation:isolate"></path><path d="M15.783,8.85H8.512V25.1h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.783,8.85H8.512V23.8h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.132,8.85H8.512V23.8h6.62a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.132,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M3.194,8.85H15.132a1.193,1.193,0,0,1,1.194,1.191V21.959a1.193,1.193,0,0,1-1.194,1.191H3.194A1.192,1.192,0,0,1,2,21.959V10.041A1.192,1.192,0,0,1,3.194,8.85Z" style="fill:url(#a)"></path><path d="M5.7,19.873l2.511-3.884-2.3-3.862H7.758L9.013,14.6c.116.234.2.408.238.524h.017c.082-.188.169-.369.26-.546l1.342-2.447h1.7l-2.359,3.84,2.419,3.905H10.821l-1.45-2.711A2.355,2.355,0,0,1,9.2,16.8H9.176a1.688,1.688,0,0,1-.168.351L7.515,19.873Z" style="fill:#fff"></path><path d="M28.806,3H19.581V9.5H30V4.191A1.192,1.192,0,0,0,28.806,3Z" style="fill:#33c481"></path><path d="M19.581,16H30v6.5H19.581Z" style="fill:#107c41"></path></g></svg>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -87,9 +95,12 @@
             <div class="h-full">                  
                 <div class="bg-[#222] rounded-2xl p-6 shadow-xl button-85 h-full">
                     <div class="flex flex-col gap-3 h-full min-h-[300px]">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
-                            Practice Task 2
-                        </h2>
+                        <div class="flex flex-row justify-between">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Practice Task 2
+                            </h2>
+                            <span class="bg-[#333] text-yellow-400 px-[20px] sm:px-4 py-[10px] rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                        </div>
                         <div class="flex items-center gap-2 text-gray-400">
                             <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -100,9 +111,14 @@
                             Practice Task 2 demonstrates how to use basic functions in MS Excel to perform calculations and manage data. It helps users understand how formulas can quickly analyze and organize information in a spreadsheet.
                         </p>
                         <div class="mt-auto flex flex-row flex-nowrap gap-1 sm:gap-2 justify-between sm:justify-end items-center w-full">
-                            <span class="bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewPracTask2">View PDF</span>
-                            <span class="bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelPracTask2">View Excel</span>
-                            <span class="bg-[#333] text-yellow-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                            <span class="h-[35px] flex flex-row bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap items-center gap-[6px]" id="viewPracTask2">
+                                View PDF
+                                <svg height="15px" width="15px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 309.267 309.267" fill="#000000"><g><path style="fill:#E2574C;" d="M38.658,0h164.23l87.049,86.711v203.227c0,10.679-8.659,19.329-19.329,19.329H38.658 c-10.67,0-19.329-8.65-19.329-19.329V19.329C19.329,8.65,27.989,0,38.658,0z"></path><path style="fill:#B53629;" d="M289.658,86.981h-67.372c-10.67,0-19.329-8.659-19.329-19.329V0.193L289.658,86.981z"></path><path style="fill:#FFFFFF;" d="M217.434,146.544c3.238,0,4.823-2.822,4.823-5.557c0-2.832-1.653-5.567-4.823-5.567h-18.44 c-3.605,0-5.615,2.986-5.615,6.282v45.317c0,4.04,2.3,6.282,5.412,6.282c3.093,0,5.403-2.242,5.403-6.282v-12.438h11.153 c3.46,0,5.19-2.832,5.19-5.644c0-2.754-1.73-5.49-5.19-5.49h-11.153v-16.903C204.194,146.544,217.434,146.544,217.434,146.544z M155.107,135.42h-13.492c-3.663,0-6.263,2.513-6.263,6.243v45.395c0,4.629,3.74,6.079,6.417,6.079h14.159 c16.758,0,27.824-11.027,27.824-28.047C183.743,147.095,173.325,135.42,155.107,135.42z M155.755,181.946h-8.225v-35.334h7.413 c11.221,0,16.101,7.529,16.101,17.918C171.044,174.253,166.25,181.946,155.755,181.946z M106.33,135.42H92.964 c-3.779,0-5.886,2.493-5.886,6.282v45.317c0,4.04,2.416,6.282,5.663,6.282s5.663-2.242,5.663-6.282v-13.231h8.379 c10.341,0,18.875-7.326,18.875-19.107C125.659,143.152,117.425,135.42,106.33,135.42z M106.108,163.158h-7.703v-17.097h7.703 c4.755,0,7.78,3.711,7.78,8.553C113.878,159.447,110.863,163.158,106.108,163.158z"></path></g></svg>
+                            </span>
+                            <span class="h-[35px] flex flex-row gap-[7px] items-center bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelPracTask2">
+                                View Excel
+                                <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M19.581,15.35,8.512,13.4V27.809A1.192,1.192,0,0,0,9.705,29h19.1A1.192,1.192,0,0,0,30,27.809h0V22.5Z" style="fill:#185c37"></path><path d="M19.581,3H9.705A1.192,1.192,0,0,0,8.512,4.191h0V9.5L19.581,16l5.861,1.95L30,16V9.5Z" style="fill:#21a366"></path><path d="M8.512,9.5H19.581V16H8.512Z" style="fill:#107c41"></path><path d="M16.434,8.2H8.512V24.45h7.922a1.2,1.2,0,0,0,1.194-1.191V9.391A1.2,1.2,0,0,0,16.434,8.2Z" style="opacity:0.10000000149011612;isolation:isolate"></path><path d="M15.783,8.85H8.512V25.1h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.783,8.85H8.512V23.8h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.132,8.85H8.512V23.8h6.62a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.132,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M3.194,8.85H15.132a1.193,1.193,0,0,1,1.194,1.191V21.959a1.193,1.193,0,0,1-1.194,1.191H3.194A1.192,1.192,0,0,1,2,21.959V10.041A1.192,1.192,0,0,1,3.194,8.85Z" style="fill:url(#a)"></path><path d="M5.7,19.873l2.511-3.884-2.3-3.862H7.758L9.013,14.6c.116.234.2.408.238.524h.017c.082-.188.169-.369.26-.546l1.342-2.447h1.7l-2.359,3.84,2.419,3.905H10.821l-1.45-2.711A2.355,2.355,0,0,1,9.2,16.8H9.176a1.688,1.688,0,0,1-.168.351L7.515,19.873Z" style="fill:#fff"></path><path d="M28.806,3H19.581V9.5H30V4.191A1.192,1.192,0,0,0,28.806,3Z" style="fill:#33c481"></path><path d="M19.581,16H30v6.5H19.581Z" style="fill:#107c41"></path></g></svg>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -113,9 +129,12 @@
             <div class="h-full">                  
                 <div class="bg-[#222] rounded-2xl p-6 shadow-xl button-85 h-full">
                     <div class="flex flex-col gap-3 h-full min-h-[300px]">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
-                            Practice Task 3
-                        </h2>
+                        <div class="flex flex-row justify-between">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Practice Task 3
+                            </h2>
+                            <span class="bg-[#333] text-yellow-400 px-[20px] sm:px-4 py-[10px] rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                        </div>
                         <div class="flex items-center gap-2 text-gray-400">
                             <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -126,9 +145,14 @@
                             Practice Task 3 shows how to create a simple dashboard in Excel to display data visually. It demonstrates how charts, tables, and other tools can be used to summarize and present information clearly.
                         </p>
                         <div class="mt-auto flex flex-row flex-nowrap gap-1 sm:gap-2 justify-between sm:justify-end items-center w-full">
-                            <span class="bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewPracTask3">View PDF</span>
-                            <span class="bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelPracTask3">View Excel</span>
-                            <span class="bg-[#333] text-yellow-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                            <span class="h-[35px] flex flex-row bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap items-center gap-[6px]" id="viewPracTask3">
+                                View PDF
+                                <svg height="15px" width="15px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 309.267 309.267" fill="#000000"><g><path style="fill:#E2574C;" d="M38.658,0h164.23l87.049,86.711v203.227c0,10.679-8.659,19.329-19.329,19.329H38.658 c-10.67,0-19.329-8.65-19.329-19.329V19.329C19.329,8.65,27.989,0,38.658,0z"></path><path style="fill:#B53629;" d="M289.658,86.981h-67.372c-10.67,0-19.329-8.659-19.329-19.329V0.193L289.658,86.981z"></path><path style="fill:#FFFFFF;" d="M217.434,146.544c3.238,0,4.823-2.822,4.823-5.557c0-2.832-1.653-5.567-4.823-5.567h-18.44 c-3.605,0-5.615,2.986-5.615,6.282v45.317c0,4.04,2.3,6.282,5.412,6.282c3.093,0,5.403-2.242,5.403-6.282v-12.438h11.153 c3.46,0,5.19-2.832,5.19-5.644c0-2.754-1.73-5.49-5.19-5.49h-11.153v-16.903C204.194,146.544,217.434,146.544,217.434,146.544z M155.107,135.42h-13.492c-3.663,0-6.263,2.513-6.263,6.243v45.395c0,4.629,3.74,6.079,6.417,6.079h14.159 c16.758,0,27.824-11.027,27.824-28.047C183.743,147.095,173.325,135.42,155.107,135.42z M155.755,181.946h-8.225v-35.334h7.413 c11.221,0,16.101,7.529,16.101,17.918C171.044,174.253,166.25,181.946,155.755,181.946z M106.33,135.42H92.964 c-3.779,0-5.886,2.493-5.886,6.282v45.317c0,4.04,2.416,6.282,5.663,6.282s5.663-2.242,5.663-6.282v-13.231h8.379 c10.341,0,18.875-7.326,18.875-19.107C125.659,143.152,117.425,135.42,106.33,135.42z M106.108,163.158h-7.703v-17.097h7.703 c4.755,0,7.78,3.711,7.78,8.553C113.878,159.447,110.863,163.158,106.108,163.158z"></path></g></svg>
+                            </span>
+                            <span class="h-[35px] flex flex-row gap-[7px] items-center bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelPracTask3">
+                                View Excel
+                                <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M19.581,15.35,8.512,13.4V27.809A1.192,1.192,0,0,0,9.705,29h19.1A1.192,1.192,0,0,0,30,27.809h0V22.5Z" style="fill:#185c37"></path><path d="M19.581,3H9.705A1.192,1.192,0,0,0,8.512,4.191h0V9.5L19.581,16l5.861,1.95L30,16V9.5Z" style="fill:#21a366"></path><path d="M8.512,9.5H19.581V16H8.512Z" style="fill:#107c41"></path><path d="M16.434,8.2H8.512V24.45h7.922a1.2,1.2,0,0,0,1.194-1.191V9.391A1.2,1.2,0,0,0,16.434,8.2Z" style="opacity:0.10000000149011612;isolation:isolate"></path><path d="M15.783,8.85H8.512V25.1h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.783,8.85H8.512V23.8h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.132,8.85H8.512V23.8h6.62a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.132,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M3.194,8.85H15.132a1.193,1.193,0,0,1,1.194,1.191V21.959a1.193,1.193,0,0,1-1.194,1.191H3.194A1.192,1.192,0,0,1,2,21.959V10.041A1.192,1.192,0,0,1,3.194,8.85Z" style="fill:url(#a)"></path><path d="M5.7,19.873l2.511-3.884-2.3-3.862H7.758L9.013,14.6c.116.234.2.408.238.524h.017c.082-.188.169-.369.26-.546l1.342-2.447h1.7l-2.359,3.84,2.419,3.905H10.821l-1.45-2.711A2.355,2.355,0,0,1,9.2,16.8H9.176a1.688,1.688,0,0,1-.168.351L7.515,19.873Z" style="fill:#fff"></path><path d="M28.806,3H19.581V9.5H30V4.191A1.192,1.192,0,0,0,28.806,3Z" style="fill:#33c481"></path><path d="M19.581,16H30v6.5H19.581Z" style="fill:#107c41"></path></g></svg>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -139,9 +163,12 @@
             <div class="h-full">                  
                 <div class="bg-[#222] rounded-2xl p-6 shadow-xl button-85 h-full">
                     <div class="flex flex-col gap-3 h-full min-h-[300px]">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
-                            Practice Task 4
-                        </h2>
+                        <div class="flex flex-row justify-between">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Practice Task 4
+                            </h2>
+                            <span class="bg-[#333] text-yellow-400 px-[20px] sm:px-4 py-[10px] rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                        </div>
                         <div class="flex items-center gap-2 text-gray-400">
                             <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -152,9 +179,14 @@
                             Practice Task 4 demonstrates how to use Power Query for data normalization and organizing tables. It also shows how different tables can be connected and displayed in a diagram to better understand the relationships between the data.
                         </p>
                         <div class="mt-auto flex flex-row flex-nowrap gap-1 sm:gap-2 justify-between sm:justify-end items-center w-full">
-                            <span class="bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewPracTask4">View PDF</span>
-                            <span class="bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelPracTask4">View Excel</span>
-                            <span class="bg-[#333] text-yellow-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                            <span class="h-[35px] flex flex-row bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap items-center gap-[6px]" id="viewPracTask4">
+                                View PDF
+                                <svg height="15px" width="15px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 309.267 309.267" fill="#000000"><g><path style="fill:#E2574C;" d="M38.658,0h164.23l87.049,86.711v203.227c0,10.679-8.659,19.329-19.329,19.329H38.658 c-10.67,0-19.329-8.65-19.329-19.329V19.329C19.329,8.65,27.989,0,38.658,0z"></path><path style="fill:#B53629;" d="M289.658,86.981h-67.372c-10.67,0-19.329-8.659-19.329-19.329V0.193L289.658,86.981z"></path><path style="fill:#FFFFFF;" d="M217.434,146.544c3.238,0,4.823-2.822,4.823-5.557c0-2.832-1.653-5.567-4.823-5.567h-18.44 c-3.605,0-5.615,2.986-5.615,6.282v45.317c0,4.04,2.3,6.282,5.412,6.282c3.093,0,5.403-2.242,5.403-6.282v-12.438h11.153 c3.46,0,5.19-2.832,5.19-5.644c0-2.754-1.73-5.49-5.19-5.49h-11.153v-16.903C204.194,146.544,217.434,146.544,217.434,146.544z M155.107,135.42h-13.492c-3.663,0-6.263,2.513-6.263,6.243v45.395c0,4.629,3.74,6.079,6.417,6.079h14.159 c16.758,0,27.824-11.027,27.824-28.047C183.743,147.095,173.325,135.42,155.107,135.42z M155.755,181.946h-8.225v-35.334h7.413 c11.221,0,16.101,7.529,16.101,17.918C171.044,174.253,166.25,181.946,155.755,181.946z M106.33,135.42H92.964 c-3.779,0-5.886,2.493-5.886,6.282v45.317c0,4.04,2.416,6.282,5.663,6.282s5.663-2.242,5.663-6.282v-13.231h8.379 c10.341,0,18.875-7.326,18.875-19.107C125.659,143.152,117.425,135.42,106.33,135.42z M106.108,163.158h-7.703v-17.097h7.703 c4.755,0,7.78,3.711,7.78,8.553C113.878,159.447,110.863,163.158,106.108,163.158z"></path></g></svg>
+                            </span>
+                            <span class="h-[35px] flex flex-row gap-[7px] items-center bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelPracTask4">
+                                View Excel
+                                <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M19.581,15.35,8.512,13.4V27.809A1.192,1.192,0,0,0,9.705,29h19.1A1.192,1.192,0,0,0,30,27.809h0V22.5Z" style="fill:#185c37"></path><path d="M19.581,3H9.705A1.192,1.192,0,0,0,8.512,4.191h0V9.5L19.581,16l5.861,1.95L30,16V9.5Z" style="fill:#21a366"></path><path d="M8.512,9.5H19.581V16H8.512Z" style="fill:#107c41"></path><path d="M16.434,8.2H8.512V24.45h7.922a1.2,1.2,0,0,0,1.194-1.191V9.391A1.2,1.2,0,0,0,16.434,8.2Z" style="opacity:0.10000000149011612;isolation:isolate"></path><path d="M15.783,8.85H8.512V25.1h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.783,8.85H8.512V23.8h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.132,8.85H8.512V23.8h6.62a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.132,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M3.194,8.85H15.132a1.193,1.193,0,0,1,1.194,1.191V21.959a1.193,1.193,0,0,1-1.194,1.191H3.194A1.192,1.192,0,0,1,2,21.959V10.041A1.192,1.192,0,0,1,3.194,8.85Z" style="fill:url(#a)"></path><path d="M5.7,19.873l2.511-3.884-2.3-3.862H7.758L9.013,14.6c.116.234.2.408.238.524h.017c.082-.188.169-.369.26-.546l1.342-2.447h1.7l-2.359,3.84,2.419,3.905H10.821l-1.45-2.711A2.355,2.355,0,0,1,9.2,16.8H9.176a1.688,1.688,0,0,1-.168.351L7.515,19.873Z" style="fill:#fff"></path><path d="M28.806,3H19.581V9.5H30V4.191A1.192,1.192,0,0,0,28.806,3Z" style="fill:#33c481"></path><path d="M19.581,16H30v6.5H19.581Z" style="fill:#107c41"></path></g></svg>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -165,9 +197,12 @@
             <div class="h-full">                  
                 <div class="bg-[#222] rounded-2xl p-6 shadow-xl button-85 h-full">
                     <div class="flex flex-col gap-3 h-full min-h-[300px]">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
-                            Midterm Task 1
-                        </h2>
+                        <div class="flex flex-row justify-between">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Midterm Task 1
+                            </h2>
+                            <span class="bg-[#333] text-yellow-400 px-[20px] sm:px-4 py-[10px] rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                        </div>
                         <div class="flex items-center gap-2 text-gray-400">
                             <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -178,9 +213,14 @@
                             Midterm Lab Task 1 focuses on cleaning and preparing the dataset by identifying and correcting errors, handling missing values, and formatting the data for accurate analysis. This ensures the data is consistent, reliable, and ready for further processing.
                         </p>
                         <div class="mt-auto flex flex-row flex-nowrap gap-1 sm:gap-2 justify-between sm:justify-end items-center w-full">
-                            <span class="bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewMidTask1">View PDF</span>
-                            <span class="bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelMidTask1">View Excel</span>
-                            <span class="bg-[#333] text-yellow-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                            <span class="h-[35px] flex flex-row bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap items-center gap-[6px]" id="viewMidTask1">
+                                View PDF
+                                <svg height="15px" width="15px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 309.267 309.267" fill="#000000"><g><path style="fill:#E2574C;" d="M38.658,0h164.23l87.049,86.711v203.227c0,10.679-8.659,19.329-19.329,19.329H38.658 c-10.67,0-19.329-8.65-19.329-19.329V19.329C19.329,8.65,27.989,0,38.658,0z"></path><path style="fill:#B53629;" d="M289.658,86.981h-67.372c-10.67,0-19.329-8.659-19.329-19.329V0.193L289.658,86.981z"></path><path style="fill:#FFFFFF;" d="M217.434,146.544c3.238,0,4.823-2.822,4.823-5.557c0-2.832-1.653-5.567-4.823-5.567h-18.44 c-3.605,0-5.615,2.986-5.615,6.282v45.317c0,4.04,2.3,6.282,5.412,6.282c3.093,0,5.403-2.242,5.403-6.282v-12.438h11.153 c3.46,0,5.19-2.832,5.19-5.644c0-2.754-1.73-5.49-5.19-5.49h-11.153v-16.903C204.194,146.544,217.434,146.544,217.434,146.544z M155.107,135.42h-13.492c-3.663,0-6.263,2.513-6.263,6.243v45.395c0,4.629,3.74,6.079,6.417,6.079h14.159 c16.758,0,27.824-11.027,27.824-28.047C183.743,147.095,173.325,135.42,155.107,135.42z M155.755,181.946h-8.225v-35.334h7.413 c11.221,0,16.101,7.529,16.101,17.918C171.044,174.253,166.25,181.946,155.755,181.946z M106.33,135.42H92.964 c-3.779,0-5.886,2.493-5.886,6.282v45.317c0,4.04,2.416,6.282,5.663,6.282s5.663-2.242,5.663-6.282v-13.231h8.379 c10.341,0,18.875-7.326,18.875-19.107C125.659,143.152,117.425,135.42,106.33,135.42z M106.108,163.158h-7.703v-17.097h7.703 c4.755,0,7.78,3.711,7.78,8.553C113.878,159.447,110.863,163.158,106.108,163.158z"></path></g></svg>
+                            </span>
+                            <span class="h-[35px] flex flex-row gap-[7px] items-center bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelMidTask1">
+                                View Excel
+                                <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M19.581,15.35,8.512,13.4V27.809A1.192,1.192,0,0,0,9.705,29h19.1A1.192,1.192,0,0,0,30,27.809h0V22.5Z" style="fill:#185c37"></path><path d="M19.581,3H9.705A1.192,1.192,0,0,0,8.512,4.191h0V9.5L19.581,16l5.861,1.95L30,16V9.5Z" style="fill:#21a366"></path><path d="M8.512,9.5H19.581V16H8.512Z" style="fill:#107c41"></path><path d="M16.434,8.2H8.512V24.45h7.922a1.2,1.2,0,0,0,1.194-1.191V9.391A1.2,1.2,0,0,0,16.434,8.2Z" style="opacity:0.10000000149011612;isolation:isolate"></path><path d="M15.783,8.85H8.512V25.1h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.783,8.85H8.512V23.8h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.132,8.85H8.512V23.8h6.62a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.132,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M3.194,8.85H15.132a1.193,1.193,0,0,1,1.194,1.191V21.959a1.193,1.193,0,0,1-1.194,1.191H3.194A1.192,1.192,0,0,1,2,21.959V10.041A1.192,1.192,0,0,1,3.194,8.85Z" style="fill:url(#a)"></path><path d="M5.7,19.873l2.511-3.884-2.3-3.862H7.758L9.013,14.6c.116.234.2.408.238.524h.017c.082-.188.169-.369.26-.546l1.342-2.447h1.7l-2.359,3.84,2.419,3.905H10.821l-1.45-2.711A2.355,2.355,0,0,1,9.2,16.8H9.176a1.688,1.688,0,0,1-.168.351L7.515,19.873Z" style="fill:#fff"></path><path d="M28.806,3H19.581V9.5H30V4.191A1.192,1.192,0,0,0,28.806,3Z" style="fill:#33c481"></path><path d="M19.581,16H30v6.5H19.581Z" style="fill:#107c41"></path></g></svg>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -191,9 +231,12 @@
             <div class="h-full">                  
                 <div class="bg-[#222] rounded-2xl p-6 shadow-xl button-85 h-full">
                     <div class="flex flex-col gap-3 h-full min-h-[300px]">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
-                            Midterm Task 2
-                        </h2>
+                        <div class="flex flex-row justify-between">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Midterm Task 2
+                            </h2>
+                            <span class="bg-[#333] text-yellow-400 px-[20px] sm:px-4 py-[10px] rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                        </div>
                         <div class="flex items-center gap-2 text-gray-400">
                             <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -204,9 +247,14 @@
                             Midterm Task 2 involves creating pivot tables and charts in Excel to summarize, analyze, and visualize data efficiently. This allows for quick insights and clearer presentation of trends and patterns.
                         </p>
                         <div class="mt-auto flex flex-row flex-nowrap gap-1 sm:gap-2 justify-between sm:justify-end items-center w-full">
-                            <span class="bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewMidTask2">View PDF</span>
-                            <span class="bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelMidTask2">View Excel</span>
-                            <span class="bg-[#333] text-yellow-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                            <span class="h-[35px] flex flex-row bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap items-center gap-[6px]" id="viewMidTask2">
+                                View PDF
+                                <svg height="15px" width="15px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 309.267 309.267" fill="#000000"><g><path style="fill:#E2574C;" d="M38.658,0h164.23l87.049,86.711v203.227c0,10.679-8.659,19.329-19.329,19.329H38.658 c-10.67,0-19.329-8.65-19.329-19.329V19.329C19.329,8.65,27.989,0,38.658,0z"></path><path style="fill:#B53629;" d="M289.658,86.981h-67.372c-10.67,0-19.329-8.659-19.329-19.329V0.193L289.658,86.981z"></path><path style="fill:#FFFFFF;" d="M217.434,146.544c3.238,0,4.823-2.822,4.823-5.557c0-2.832-1.653-5.567-4.823-5.567h-18.44 c-3.605,0-5.615,2.986-5.615,6.282v45.317c0,4.04,2.3,6.282,5.412,6.282c3.093,0,5.403-2.242,5.403-6.282v-12.438h11.153 c3.46,0,5.19-2.832,5.19-5.644c0-2.754-1.73-5.49-5.19-5.49h-11.153v-16.903C204.194,146.544,217.434,146.544,217.434,146.544z M155.107,135.42h-13.492c-3.663,0-6.263,2.513-6.263,6.243v45.395c0,4.629,3.74,6.079,6.417,6.079h14.159 c16.758,0,27.824-11.027,27.824-28.047C183.743,147.095,173.325,135.42,155.107,135.42z M155.755,181.946h-8.225v-35.334h7.413 c11.221,0,16.101,7.529,16.101,17.918C171.044,174.253,166.25,181.946,155.755,181.946z M106.33,135.42H92.964 c-3.779,0-5.886,2.493-5.886,6.282v45.317c0,4.04,2.416,6.282,5.663,6.282s5.663-2.242,5.663-6.282v-13.231h8.379 c10.341,0,18.875-7.326,18.875-19.107C125.659,143.152,117.425,135.42,106.33,135.42z M106.108,163.158h-7.703v-17.097h7.703 c4.755,0,7.78,3.711,7.78,8.553C113.878,159.447,110.863,163.158,106.108,163.158z"></path></g></svg>
+                            </span>
+                            <span class="h-[35px] flex flex-row gap-[7px] items-center bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelMidTask2">
+                                View Excel
+                                <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M19.581,15.35,8.512,13.4V27.809A1.192,1.192,0,0,0,9.705,29h19.1A1.192,1.192,0,0,0,30,27.809h0V22.5Z" style="fill:#185c37"></path><path d="M19.581,3H9.705A1.192,1.192,0,0,0,8.512,4.191h0V9.5L19.581,16l5.861,1.95L30,16V9.5Z" style="fill:#21a366"></path><path d="M8.512,9.5H19.581V16H8.512Z" style="fill:#107c41"></path><path d="M16.434,8.2H8.512V24.45h7.922a1.2,1.2,0,0,0,1.194-1.191V9.391A1.2,1.2,0,0,0,16.434,8.2Z" style="opacity:0.10000000149011612;isolation:isolate"></path><path d="M15.783,8.85H8.512V25.1h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.783,8.85H8.512V23.8h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.132,8.85H8.512V23.8h6.62a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.132,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M3.194,8.85H15.132a1.193,1.193,0,0,1,1.194,1.191V21.959a1.193,1.193,0,0,1-1.194,1.191H3.194A1.192,1.192,0,0,1,2,21.959V10.041A1.192,1.192,0,0,1,3.194,8.85Z" style="fill:url(#a)"></path><path d="M5.7,19.873l2.511-3.884-2.3-3.862H7.758L9.013,14.6c.116.234.2.408.238.524h.017c.082-.188.169-.369.26-.546l1.342-2.447h1.7l-2.359,3.84,2.419,3.905H10.821l-1.45-2.711A2.355,2.355,0,0,1,9.2,16.8H9.176a1.688,1.688,0,0,1-.168.351L7.515,19.873Z" style="fill:#fff"></path><path d="M28.806,3H19.581V9.5H30V4.191A1.192,1.192,0,0,0,28.806,3Z" style="fill:#33c481"></path><path d="M19.581,16H30v6.5H19.581Z" style="fill:#107c41"></path></g></svg>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -217,9 +265,12 @@
             <div class="h-full">                  
                 <div class="bg-[#222] rounded-2xl p-6 shadow-xl button-85 h-full">
                     <div class="flex flex-col gap-3 h-full min-h-[300px]">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
-                            Midterm Task 3
-                        </h2>
+                        <div class="flex flex-row justify-between">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white text-shadow" style="text-shadow: 2px 2px 4px #000000;">
+                                Midterm Task 3
+                            </h2>
+                            <span class="bg-[#333] text-yellow-400 px-[20px] sm:px-4 py-[10px] rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                        </div>
                         <div class="flex items-center gap-2 text-gray-400">
                             <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -230,9 +281,14 @@
                             Midterm Task 3 focuses on normalizing data using Power Query to organize it into a structured format, reducing redundancy and improving consistency. This makes the dataset easier to analyze and maintain.
                         </p>
                         <div class="mt-auto flex flex-row flex-nowrap gap-1 sm:gap-2 justify-between sm:justify-end items-center w-full">
-                            <span class="bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewMidTask3">View PDF</span>
-                            <span class="bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelMidTask3">View Excel</span>
-                            <span class="bg-[#333] text-yellow-400 px-2 sm:px-4 py-2 rounded-full text-[10px] sm:text-xs font-semibold text-center whitespace-nowrap">Finished</span>
+                            <span class="h-[35px] flex flex-row bg-[#333] text-red-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap items-center gap-[6px]" id="viewMidTask3">
+                                View PDF
+                                <svg height="15px" width="15px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 309.267 309.267" fill="#000000"><g><path style="fill:#E2574C;" d="M38.658,0h164.23l87.049,86.711v203.227c0,10.679-8.659,19.329-19.329,19.329H38.658 c-10.67,0-19.329-8.65-19.329-19.329V19.329C19.329,8.65,27.989,0,38.658,0z"></path><path style="fill:#B53629;" d="M289.658,86.981h-67.372c-10.67,0-19.329-8.659-19.329-19.329V0.193L289.658,86.981z"></path><path style="fill:#FFFFFF;" d="M217.434,146.544c3.238,0,4.823-2.822,4.823-5.557c0-2.832-1.653-5.567-4.823-5.567h-18.44 c-3.605,0-5.615,2.986-5.615,6.282v45.317c0,4.04,2.3,6.282,5.412,6.282c3.093,0,5.403-2.242,5.403-6.282v-12.438h11.153 c3.46,0,5.19-2.832,5.19-5.644c0-2.754-1.73-5.49-5.19-5.49h-11.153v-16.903C204.194,146.544,217.434,146.544,217.434,146.544z M155.107,135.42h-13.492c-3.663,0-6.263,2.513-6.263,6.243v45.395c0,4.629,3.74,6.079,6.417,6.079h14.159 c16.758,0,27.824-11.027,27.824-28.047C183.743,147.095,173.325,135.42,155.107,135.42z M155.755,181.946h-8.225v-35.334h7.413 c11.221,0,16.101,7.529,16.101,17.918C171.044,174.253,166.25,181.946,155.755,181.946z M106.33,135.42H92.964 c-3.779,0-5.886,2.493-5.886,6.282v45.317c0,4.04,2.416,6.282,5.663,6.282s5.663-2.242,5.663-6.282v-13.231h8.379 c10.341,0,18.875-7.326,18.875-19.107C125.659,143.152,117.425,135.42,106.33,135.42z M106.108,163.158h-7.703v-17.097h7.703 c4.755,0,7.78,3.711,7.78,8.553C113.878,159.447,110.863,163.158,106.108,163.158z"></path></g></svg>
+                            </span>
+                            <span class="h-[35px] flex flex-row gap-[7px] items-center bg-[#333] text-green-400 px-2 sm:px-4 py-2 rounded-[10px] text-[10px] sm:text-xs font-semibold cursor-pointer text-center whitespace-nowrap" id="viewExcelMidTask3">
+                                View Excel
+                                <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M19.581,15.35,8.512,13.4V27.809A1.192,1.192,0,0,0,9.705,29h19.1A1.192,1.192,0,0,0,30,27.809h0V22.5Z" style="fill:#185c37"></path><path d="M19.581,3H9.705A1.192,1.192,0,0,0,8.512,4.191h0V9.5L19.581,16l5.861,1.95L30,16V9.5Z" style="fill:#21a366"></path><path d="M8.512,9.5H19.581V16H8.512Z" style="fill:#107c41"></path><path d="M16.434,8.2H8.512V24.45h7.922a1.2,1.2,0,0,0,1.194-1.191V9.391A1.2,1.2,0,0,0,16.434,8.2Z" style="opacity:0.10000000149011612;isolation:isolate"></path><path d="M15.783,8.85H8.512V25.1h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.783,8.85H8.512V23.8h7.271a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.783,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M15.132,8.85H8.512V23.8h6.62a1.2,1.2,0,0,0,1.194-1.191V10.041A1.2,1.2,0,0,0,15.132,8.85Z" style="opacity:0.20000000298023224;isolation:isolate"></path><path d="M3.194,8.85H15.132a1.193,1.193,0,0,1,1.194,1.191V21.959a1.193,1.193,0,0,1-1.194,1.191H3.194A1.192,1.192,0,0,1,2,21.959V10.041A1.192,1.192,0,0,1,3.194,8.85Z" style="fill:url(#a)"></path><path d="M5.7,19.873l2.511-3.884-2.3-3.862H7.758L9.013,14.6c.116.234.2.408.238.524h.017c.082-.188.169-.369.26-.546l1.342-2.447h1.7l-2.359,3.84,2.419,3.905H10.821l-1.45-2.711A2.355,2.355,0,0,1,9.2,16.8H9.176a1.688,1.688,0,0,1-.168.351L7.515,19.873Z" style="fill:#fff"></path><path d="M28.806,3H19.581V9.5H30V4.191A1.192,1.192,0,0,0,28.806,3Z" style="fill:#33c481"></path><path d="M19.581,16H30v6.5H19.581Z" style="fill:#107c41"></path></g></svg>
+                            </span>
                         </div>
                     </div>
                 </div>
