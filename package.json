@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.16"
+    "tailwindcss": "^4.1.16",
+    "vite": "^6.0.0"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.16",
@@ -27,6 +32,8 @@
     "normalize-range": "^0.1.2",
     "picocolors": "^1.1.1",
     "postcss-value-parser": "^4.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "source-map-js": "^1.2.1",
     "update-browserslist-db": "^1.1.4"
   }
