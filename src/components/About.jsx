@@ -3,7 +3,7 @@ import React from 'react'
 export default function About() {
   const handleViewCV = () => {
     const link = document.createElement("a")
-    link.href = `${import.meta.env.BASE_URL}certfolder/resume.docx.pdf`  
+    link.href = `${import.meta.env.BASE_URL}certfolder/Wesly_Cunanan_CV.pdf`  
     link.target = "_blank"    
     link.click()
   }
