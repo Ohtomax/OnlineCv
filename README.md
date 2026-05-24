@@ -38,3 +38,8 @@ I specialize in the **PERN stack** (PostgreSQL, Express, React, Node.js) with a 
 
 ## 🌐 Live Demo & Links
 🔗 [View My Online CV](https://ohtomax.github.io/OnlineCv/)
+
+---
+
+## 🎯 Development Status
+I am actively working on evolving this Online CV into a **Dynamic Portfolio**. The repository is currently under heavy development with the goal of migrating from a static Single Page Application (SPA) to a dynamic, data-driven system. This will enable enhanced features such as **Project Metadata Management**, **Advanced Analytics Tracking**, and **Streamlined Content Updates**, allowing me to showcase my technical expertise and professional growth more effectively.

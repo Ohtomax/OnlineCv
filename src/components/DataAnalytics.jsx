@@ -81,7 +81,8 @@ export default function DataAnalytics() {
       category: "finals",
       date: "May 18, 2026",
       description: "Developed structured database tables and relational integrity. Authored advanced SQL scripts incorporating aggregate functions, joins, and database design procedures to prepare analytics-ready tables.",
-      sql: "/dataAnalyticsFiles/Finals Task 1. Data Preparations and Analysis using SQL.sql"
+      sql: "/dataAnalyticsFiles/Finals Task 1. Data Preparations and Analysis using SQL.sql",
+      pdf: "/dataAnalyticsFiles/Finals Task 1. Data Preparations and Analysis using SQL.pdf"
     },
     {
       id: "FinalsEssayTask1",
@@ -105,7 +106,8 @@ export default function DataAnalytics() {
       category: "finals",
       date: "May 23, 2026",
       description: "Programmed robust business logic using DAX. Crafted high-performance measures leveraging Time Intelligence functions (YoY, MoM, YTD) to conduct detailed multi-period analysis.",
-      powerbi: "/dataAnalyticsFiles/Finals Task 3. DAX Time Intelligence Function.pbix"
+      powerbi: "/dataAnalyticsFiles/Finals Task 3. DAX Time Intelligence Function.pbix",
+      pdf: "/dataAnalyticsFiles/Finals Task 3. DAX Time Intelligence Function.pdf"
     },
     {
       id: "FinalsTask4",
@@ -113,7 +115,8 @@ export default function DataAnalytics() {
       category: "finals",
       date: "May 24, 2026",
       description: "Created high-fidelity, interactive reports. Implemented advanced visualization mechanics like cross-filtering, bookmark navigation, slicers, customized tooltips, and drill-through paths.",
-      powerbi: "/dataAnalyticsFiles/Finals Task 4. Designing Interactive Reports.pbix"
+      powerbi: "/dataAnalyticsFiles/Finals Task 4. Designing Interactive Reports.pbix",
+      pdf: "/dataAnalyticsFiles/Finals Task 4. Designing Interactive Reports.pdf"
     },
     {
       id: "FinalsTask5",
@@ -121,7 +124,8 @@ export default function DataAnalytics() {
       category: "finals",
       date: "May 24, 2026",
       description: "Engineered predictive charts using advanced forecasting algorithms. Mapped key trend lines, dynamic seasonality patterns, and confidence intervals to visualize expected trajectories.",
-      powerbi: "/dataAnalyticsFiles/Finals Task 5. Forecasting Reports in PowerBi.pbix"
+      powerbi: "/dataAnalyticsFiles/Finals Task 5. Forecasting Reports in PowerBi.pbix",
+      pdf: "/dataAnalyticsFiles/Finals Task 5. Forecasting Reports in PowerBi.pdf"
     }
   ]
 
