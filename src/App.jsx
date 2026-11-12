@@ -57,19 +57,19 @@ function App() {
           </div>
           <div className="hero-visual" aria-label="Portrait of Wesly Cunanan">
             <div className="visual-grid" aria-hidden="true" />
-            <span className="visual-top">A LITTLE ABOUT ME <span>✳</span></span>
+            <span className="visual-top">SYS // PROFILE_01 <span>◈</span></span>
             <div className="portrait-circle"><img src={asset('cssfiles/images/2x2picture.png')} alt="Wesly Cunanan" /></div>
-            <div className="visual-bottom"><span>DEVELOPER<br />&amp; CREATIVE THINKER</span><span className="visual-symbol">✳</span></div>
+            <div className="visual-bottom"><span>DEVELOPER<br />&amp; CREATIVE THINKER</span><span className="visual-symbol">◈</span></div>
           </div>
           <a className="scroll-cue" href="#work"><span>SCROLL TO EXPLORE</span><span aria-hidden="true">↓</span></a>
         </section>
 
-        <div className="ticker" aria-label="Areas of interest"><div className="container ticker-inner"><span>WEB DEVELOPMENT</span><b>✳</b><span>CREATIVE PROBLEM SOLVING</span><b>✳</b><span>DATA ANALYTICS</span><b>✳</b><span>ALWAYS LEARNING</span></div></div>
+        <div className="ticker" aria-label="Areas of interest"><div className="container ticker-inner"><span>WEB DEVELOPMENT</span><b>◈</b><span>CREATIVE PROBLEM SOLVING</span><b>◈</b><span>DATA ANALYTICS</span><b>◈</b><span>ALWAYS LEARNING</span></div></div>
 
         <section id="work" className="section container">
           <div className="section-heading"><div><p className="eyebrow"><span className="eyebrow-line" /> SELECTED WORK / 01</p><h2>A few things<br /><em>I’ve built.</em></h2></div><p>From mobile applications to the web, I enjoy building projects that make ideas tangible.</p></div>
           <div className="project-grid">{projects.map((project) => <article className="project-card" key={project.number}>
-            <div className={`project-art project-art-${project.number}`} aria-hidden="true"><span className="art-index">{project.number} / SELECTED PROJECT</span>{project.number === '01' ? <div className="fitness-art"><span>FIT</span><span>JOURNEY</span><span>SYNC<span className="art-dot">.</span></span></div> : <div className="commerce-art"><span className="commerce-star">✳</span><span>purrfectly<br /><i>stitched.</i></span></div>}<span className="art-bottom">DESIGNED TO MAKE AN IDEA REAL <span>↗</span></span></div>
+            <div className={`project-art project-art-${project.number}`} aria-hidden="true"><span className="art-index">{project.number} // SELECTED PROJECT</span>{project.number === '01' ? <div className="fitness-art"><span>FIT</span><span>JOURNEY</span><span>SYNC<span className="art-dot">.</span></span></div> : <div className="commerce-art"><span className="commerce-star">◈</span><span>purrfectly<br /><i>stitched.</i></span></div>}<span className="art-bottom">DESIGNED TO MAKE AN IDEA REAL <span>↗</span></span></div>
             <div className="project-info"><div className="project-meta">{project.type} <span>{project.number} / 02</span></div><h3>{project.title}</h3><p>{project.description}</p><div className="project-footer"><div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`}>VIEW PROJECT <Arrow diagonal /></a></div></div>
           </article>)}</div>
           <a className="more-link" href="https://github.com/Ohtomax" target="_blank" rel="noopener noreferrer">More on GitHub <Arrow diagonal /></a>
