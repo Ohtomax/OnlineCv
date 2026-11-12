@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { analyticsTasks } from './data/analytics'
 import './cssfiles/portfolio.css'
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
@@ -22,15 +21,6 @@ function Arrow({ diagonal = false }) {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [filter, setFilter] = useState('all')
-  const [showAll, setShowAll] = useState(false)
-  const filteredTasks = analyticsTasks.filter((task) => filter === 'all' || task.category === filter)
-  const visibleTasks = showAll ? filteredTasks : filteredTasks.slice(0, 4)
-
-  function changeFilter(value) {
-    setFilter(value)
-    setShowAll(false)
-  }
 
   return (
     <>
@@ -40,7 +30,7 @@ function App() {
           <a className="brand" href="#home" aria-label="Wesly Cunanan, home"><span className="brand-mark">W<span>.</span></span><span>WESLY CUNANAN</span></a>
           <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close' : 'Menu'} <span aria-hidden="true">{menuOpen ? '×' : '☰'}</span></button>
           <nav id="main-navigation" className={menuOpen ? 'navigation is-open' : 'navigation'} aria-label="Main navigation">
-            {[['Work', '#work'], ['About', '#about'], ['Experience', '#experience'], ['Analytics', '#analytics']].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
+            {[['Work', '#work'], ['About', '#about'], ['Experience', '#experience']].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
             <a className="nav-contact" href="#contact" onClick={() => setMenuOpen(false)}>Let’s talk <Arrow diagonal /></a>
           </nav>
         </div>
@@ -81,9 +71,7 @@ function App() {
           <div className="experience-grid"><div><h3 className="column-heading">Education &amp; experience <span>↘</span></h3><div className="timeline-item"><span className="timeline-date">2023 — 2027</span><div><h4>BS Computer Science</h4><p>City College of Angeles</p><p>Building a foundation in development and analytical thinking through study and practical projects.</p></div></div><div className="timeline-item"><span className="timeline-date">JUN 2025 — JAN 2026</span><div><h4>Language Assessor</h4><p>GNGN Eikaiwa Philippines</p><p>Evaluated language skills and provided feedback to support students’ progress.</p></div></div><div className="timeline-item"><span className="timeline-date">FROM OCT 2023</span><div><h4>Cashier &amp; Fitness Instructor</h4><p>Vibes Fitness Gym</p><p>Developed communication and leadership skills through part-time work and coaching.</p></div></div></div><div><h3 className="column-heading">Certifications <span>↗</span></h3><div className="cert-list">{certificates.map(([title, issuer, path]) => <a key={path} href={asset(path)} target="_blank" rel="noopener noreferrer"><span><strong>{title}</strong><small>{issuer}</small></span><Arrow diagonal /></a>)}</div></div></div>
         </section>
 
-        <section id="analytics" className="analytics-section"><div className="container"><div className="section-heading"><div><p className="eyebrow"><span className="eyebrow-line" /> BEYOND THE CODE / 04</p><h2>Exploring data,<br /><em>finding clarity.</em></h2></div><p>A collection of coursework exploring data preparation, SQL, Excel, and Power BI.</p></div><div className="filters" aria-label="Filter analytics work">{[['all', 'All work'], ['midterm', 'Midterm'], ['finals', 'Finals']].map(([value, label]) => <button key={value} type="button" aria-pressed={filter === value} onClick={() => changeFilter(value)}>{label}</button>)}</div><div className="analytics-grid">{visibleTasks.map((task) => <article className="analytics-card" key={task.id}><div className="analytics-meta"><span>{task.category.toUpperCase()}</span><span>{task.date}</span></div><h3>{task.title}</h3><p>{task.description}</p><div className="analytics-links">{task.pdf && <a href={asset(task.pdf)} target="_blank" rel="noopener noreferrer">VIEW PDF <Arrow diagonal /></a>}{task.excel && <a href={task.excel} target="_blank" rel="noopener noreferrer">SPREADSHEET <Arrow diagonal /></a>}{task.sql && <a href={asset(task.sql)} download>SQL FILE ↓</a>}{task.powerbi && <a href={asset(task.powerbi)} download>POWER BI FILE ↓</a>}</div></article>)}</div>{filteredTasks.length > 4 && <button type="button" className="show-more" onClick={() => setShowAll(!showAll)}>{showAll ? 'Show less' : `Explore all ${filteredTasks.length} entries`} <span aria-hidden="true">{showAll ? '↑' : '↓'}</span></button>}</div></section>
-
-        <section id="contact" className="contact-section"><div className="container"><p className="eyebrow"><span className="eyebrow-line" /> HAVE AN IDEA? / 05</p><div className="contact-main"><h2>Let’s make<br /><em>something good.</em></h2><div><p>Have a project in mind or just want to connect? I’d love to hear from you.</p><a className="button button-light" href="mailto:omegawesly3@gmail.com">Get in touch <Arrow diagonal /></a></div></div><div className="contact-bottom"><a href="mailto:omegawesly3@gmail.com">omegawesly3@gmail.com</a><div><a href="https://github.com/Ohtomax" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.instagram.com/wygncn" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/weslygcunanan123" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div></div></section>
+        <section id="contact" className="contact-section"><div className="container"><p className="eyebrow"><span className="eyebrow-line" /> HAVE AN IDEA? / 04</p><div className="contact-main"><h2>Let’s make<br /><em>something good.</em></h2><div><p>Have a project in mind or just want to connect? I’d love to hear from you.</p><a className="button button-light" href="mailto:omegawesly3@gmail.com">Get in touch <Arrow diagonal /></a></div></div><div className="contact-bottom"><a href="mailto:omegawesly3@gmail.com">omegawesly3@gmail.com</a><div><a href="https://github.com/Ohtomax" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.instagram.com/wygncn" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/weslygcunanan123" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div></div></section>
       </main>
       <footer><div className="container footer-inner"><span>© {new Date().getFullYear()} WESLY CUNANAN</span><span>MADE WITH CURIOSITY &amp; CARE</span><a href="#home">BACK TO TOP ↑</a></div></footer>
     </>
