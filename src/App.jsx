@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './cssfiles/portfolio.css'
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
@@ -38,13 +38,166 @@ const toolkit = [
   'Power BI',
 ]
 
+const typedPhrases = [
+  'React & TypeScript Frontends',
+  'Node.js, Express & Prisma APIs',
+  'PostgreSQL, Supabase & Firebase',
+  'AWS Cloud & Power BI Analytics',
+]
+
 function Arrow({ diagonal = false }) {
   return <span aria-hidden="true" className={diagonal ? 'arrow arrow-diag' : 'arrow'}>{diagonal ? '↗' : '→'}</span>
 }
 
+function handleCardTilt(e) {
+  const card = e.currentTarget
+  const rect = card.getBoundingClientRect()
+  const x = e.clientX - rect.left
+  const y = e.clientY - rect.top
+  const centerX = rect.width / 2
+  const centerY = rect.height / 2
+  const rotateX = ((y - centerY) / centerY) * -6
+  const rotateY = ((x - centerX) / centerX) * 6
+  card.style.setProperty('--rx', `${rotateX.toFixed(2)}deg`)
+  card.style.setProperty('--ry', `${rotateY.toFixed(2)}deg`)
+  card.style.setProperty('--mx', `${((x / rect.width) * 100).toFixed(1)}%`)
+  card.style.setProperty('--my', `${((y / rect.height) * 100).toFixed(1)}%`)
+}
+
+function resetCardTilt(e) {
+  const card = e.currentTarget
+  card.style.setProperty('--rx', '0deg')
+  card.style.setProperty('--ry', '0deg')
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [typedText, setTypedText] = useState('')
+  const [phraseIndex, setPhraseIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+  const canvasRef = useRef(null)
+  const spotlightRef = useRef(null)
 
+  // Typewriter animation
+  useEffect(() => {
+    const currentPhrase = typedPhrases[phraseIndex]
+    const speed = isDeleting ? 35 : 70
+
+    const timer = setTimeout(() => {
+      if (!isDeleting && typedText === currentPhrase) {
+        setTimeout(() => setIsDeleting(true), 1400)
+      } else if (isDeleting && typedText === '') {
+        setIsDeleting(false)
+        setPhraseIndex((prev) => (prev + 1) % typedPhrases.length)
+      } else {
+        setTypedText(
+          currentPhrase.substring(0, typedText.length + (isDeleting ? -1 : 1))
+        )
+      }
+    }, speed)
+
+    return () => clearTimeout(timer)
+  }, [typedText, isDeleting, phraseIndex])
+
+  // Interactive 60FPS monochrome particle & constellation network canvas
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    let animationFrameId
+    let width = (canvas.width = window.innerWidth)
+    let height = (canvas.height = window.innerHeight)
+
+    const mouse = { x: -9999, y: -9999 }
+
+    const handleResize = () => {
+      width = canvas.width = window.innerWidth
+      height = canvas.height = window.innerHeight
+    }
+
+    const handleMouseMove = (e) => {
+      mouse.x = e.clientX
+      mouse.y = e.clientY
+      if (spotlightRef.current) {
+        spotlightRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('mousemove', handleMouseMove, { passive: true })
+
+    const count = Math.min(70, Math.floor((width * height) / 18000))
+    const particles = Array.from({ length: count }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.65,
+      vy: (Math.random() - 0.5) * 0.65,
+      size: Math.random() * 1.8 + 0.7,
+      alpha: Math.random() * 0.55 + 0.2,
+    }))
+
+    const render = () => {
+      ctx.clearRect(0, 0, width, height)
+
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i]
+        p.x += p.vx
+        p.y += p.vy
+
+        if (p.x < 0) p.x = width
+        if (p.x > width) p.x = 0
+        if (p.y < 0) p.y = height
+        if (p.y > height) p.y = 0
+
+        // Draw particle dot
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`
+        ctx.fill()
+
+        // Connect nearby particles
+        for (let j = i + 1; j < particles.length; j++) {
+          const p2 = particles[j]
+          const dx = p.x - p2.x
+          const dy = p.y - p2.y
+          const dist = Math.hypot(dx, dy)
+          if (dist < 130) {
+            ctx.beginPath()
+            ctx.moveTo(p.x, p.y)
+            ctx.lineTo(p2.x, p2.y)
+            ctx.strokeStyle = `rgba(255, 255, 255, ${(1 - dist / 130) * 0.14})`
+            ctx.lineWidth = 0.7
+            ctx.stroke()
+          }
+        }
+
+        // Connect to mouse cursor
+        const mdx = p.x - mouse.x
+        const mdy = p.y - mouse.y
+        const mDist = Math.hypot(mdx, mdy)
+        if (mDist < 180) {
+          ctx.beginPath()
+          ctx.moveTo(p.x, p.y)
+          ctx.lineTo(mouse.x, mouse.y)
+          ctx.strokeStyle = `rgba(255, 255, 255, ${(1 - mDist / 180) * 0.35})`
+          ctx.lineWidth = 1
+          ctx.stroke()
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(render)
+    }
+
+    render()
+
+    return () => {
+      cancelAnimationFrame(animationFrameId)
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [])
+
+  // Scroll reveal observer
   useEffect(() => {
     const elements = document.querySelectorAll('.reveal')
     if (!('IntersectionObserver' in window)) {
@@ -57,11 +210,12 @@ function App() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible')
-            observer.unobserve(entry.target)
+          } else {
+            entry.target.classList.remove('is-visible')
           }
         })
       },
-      { threshold: 0.14, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
     )
 
     elements.forEach((el) => observer.observe(el))
@@ -70,6 +224,9 @@ function App() {
 
   return (
     <>
+      <canvas ref={canvasRef} className="particle-canvas" aria-hidden="true" />
+      <div ref={spotlightRef} className="cursor-spotlight" aria-hidden="true" />
+
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
         <div className="container nav-wrap">
@@ -87,12 +244,24 @@ function App() {
           <div className="hero-copy">
             <div className="eyebrow hero-anim hero-anim-1"><span className="eyebrow-line" /> PORTFOLIO // FULL-STACK DEVELOPER</div>
             <h1 className="hero-anim hero-anim-2">Thoughtful<br />digital <em>experiences.</em></h1>
+            <div className="typewriter-bar hero-anim hero-anim-3" aria-live="polite">
+              <span className="typewriter-prompt">&gt;</span>
+              <span className="typewriter-text">{typedText}</span>
+              <span className="typewriter-cursor" aria-hidden="true">_</span>
+            </div>
             <p className="hero-intro hero-anim hero-anim-3">Hey, I’m <strong>Wesly Cunanan.</strong> A full-stack developer and computer science student building modern web applications with React, TypeScript, Node.js, and cloud infrastructure.</p>
             <div className="hero-actions hero-anim hero-anim-4"><a className="button button-primary" href="#work">Explore my work <Arrow /></a><a className="text-link" href={asset('certfolder/Wesly_Cunanan_CV.pdf')} target="_blank" rel="noopener noreferrer">View my CV <Arrow diagonal /></a></div>
             <div className="hero-meta hero-anim hero-anim-5"><span>BASED IN</span><strong>Angeles City, Philippines</strong><span className="meta-divider" /><span>STACK</span><strong>React · TypeScript · Node.js · PostgreSQL</strong></div>
           </div>
-          <div className="hero-visual hero-anim hero-anim-visual" aria-label="Portrait of Wesly Cunanan">
+          <div
+            className="hero-visual hero-anim hero-anim-visual tilt-card"
+            aria-label="Portrait of Wesly Cunanan"
+            onMouseMove={handleCardTilt}
+            onMouseLeave={resetCardTilt}
+          >
             <div className="visual-grid" aria-hidden="true" />
+            <div className="visual-orbit visual-orbit-1" aria-hidden="true" />
+            <div className="visual-orbit visual-orbit-2" aria-hidden="true" />
             <div className="visual-glow" aria-hidden="true" />
             <div className="visual-scanline" aria-hidden="true" />
             <span className="visual-top">SYS // PROFILE_01 <span>◈</span></span>
@@ -104,8 +273,8 @@ function App() {
 
         <div className="ticker" aria-label="Areas of interest">
           <div className="ticker-track">
-            {[0, 1].map((dup) => (
-              <div className="ticker-group" key={dup} aria-hidden={dup === 1}>
+            {[0, 1, 2].map((dup) => (
+              <div className="ticker-group" key={dup} aria-hidden={dup > 0}>
                 {tickerItems.map((item) => (
                   <span className="ticker-item" key={`${dup}-${item}`}>
                     <span>{item}</span>
@@ -119,14 +288,20 @@ function App() {
 
         <section id="work" className="section container">
           <div className="section-heading reveal"><div><p className="eyebrow"><span className="eyebrow-line" /> SELECTED WORK / 01</p><h2>A few things<br /><em>I’ve built.</em></h2></div><p>From mobile applications to the web, I enjoy building projects that make ideas tangible.</p></div>
-          <div className="project-grid">{projects.map((project, index) => <article className="project-card reveal" style={{ '--delay': `${index * 120}ms` }} key={project.number}>
+          <div className="project-grid">{projects.map((project, index) => <article
+            className="project-card reveal tilt-card"
+            style={{ '--delay': `${index * 140}ms` }}
+            key={project.number}
+            onMouseMove={handleCardTilt}
+            onMouseLeave={resetCardTilt}
+          >
             <div className={`project-art project-art-${project.number}`} aria-hidden="true"><span className="art-index">{project.number} // SELECTED PROJECT</span>{project.number === '01' ? <div className="fitness-art"><span>FIT</span><span>JOURNEY</span><span>SYNC<span className="art-dot">.</span></span></div> : <div className="commerce-art"><span className="commerce-star">◈</span><span>purrfectly<br /><i>stitched.</i></span></div>}<span className="art-bottom">DESIGNED TO MAKE AN IDEA REAL <span>↗</span></span></div>
             <div className="project-info"><div className="project-meta">{project.type} <span>{project.number} / 02</span></div><h3>{project.title}</h3><p>{project.description}</p><div className="project-footer"><div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`}>VIEW PROJECT <Arrow diagonal /></a></div></div>
           </article>)}</div>
           <a className="more-link reveal" href="https://github.com/Ohtomax" target="_blank" rel="noopener noreferrer">More on GitHub <Arrow diagonal /></a>
         </section>
 
-        <section id="about" className="about-section"><div className="container about-grid"><div className="reveal"><p className="eyebrow"><span className="eyebrow-line" /> THE PERSON BEHIND THE CODE / 02</p><h2>Curious by nature.<br /><em>Developer by choice.</em></h2></div><div className="about-copy reveal" style={{ '--delay': '120ms' }}><p className="about-lead">I’m a computer science student with a love for building full-stack systems that work reliably and feel great to use.</p><p>Based in Angeles City, I build end-to-end applications using React, TypeScript, Node.js, Express, and PostgreSQL with Prisma ORM—backed by cloud platforms like AWS, Supabase, and Firebase, plus data analytics with Power BI.</p><a className="text-link dark-link" href="#contact">Get to know me <Arrow /></a></div><div className="skills-block reveal" style={{ '--delay': '200ms' }}><span className="small-label">THE TOOLKIT // TECH STACK</span><div className="skill-list">{toolkit.map((skill, idx) => <span key={skill} style={{ '--skill-delay': `${idx * 45}ms` }}>{skill}</span>)}</div></div></div></section>
+        <section id="about" className="about-section"><div className="container about-grid"><div className="reveal"><p className="eyebrow"><span className="eyebrow-line" /> THE PERSON BEHIND THE CODE / 02</p><h2>Curious by nature.<br /><em>Developer by choice.</em></h2></div><div className="about-copy reveal" style={{ '--delay': '120ms' }}><p className="about-lead">I’m a computer science student with a love for building full-stack systems that work reliably and feel great to use.</p><p>Based in Angeles City, I build end-to-end applications using React, TypeScript, Node.js, Express, and PostgreSQL with Prisma ORM—backed by cloud platforms like AWS, Supabase, and Firebase, plus data analytics with Power BI.</p><a className="text-link dark-link" href="#contact">Get to know me <Arrow /></a></div><div className="skills-block reveal" style={{ '--delay': '200ms' }}><span className="small-label">THE TOOLKIT // TECH STACK</span><div className="skill-list">{toolkit.map((skill, idx) => <span key={skill} style={{ '--skill-delay': `${idx * 55}ms` }}>{skill}</span>)}</div></div></div></section>
 
         <section id="experience" className="section container"><div className="section-heading reveal"><div><p className="eyebrow"><span className="eyebrow-line" /> THE JOURNEY / 03</p><h2>Learning through<br /><em>doing.</em></h2></div><p>Every experience adds a new perspective to how I solve problems and work with people.</p></div>
           <div className="experience-grid"><div className="reveal"><h3 className="column-heading">Education &amp; experience <span>↘</span></h3><div className="timeline-item"><span className="timeline-date">2023 — 2027</span><div><h4>BS Computer Science</h4><p>City College of Angeles</p><p>Building a foundation in software engineering, full-stack web development, and analytical thinking through study and practical projects.</p></div></div><div className="timeline-item"><span className="timeline-date">JUN 2025 — JAN 2026</span><div><h4>Language Assessor</h4><p>GNGN Eikaiwa Philippines</p><p>Evaluated language skills and provided feedback to support students’ progress.</p></div></div></div><div className="reveal" style={{ '--delay': '140ms' }}><h3 className="column-heading">Certifications <span>↗</span></h3><div className="cert-list">{certificates.map(([title, issuer, path]) => <a key={path} href={asset(path)} target="_blank" rel="noopener noreferrer"><span><strong>{title}</strong><small>{issuer}</small></span><Arrow diagonal /></a>)}</div></div></div>
