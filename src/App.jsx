@@ -16,10 +16,26 @@ const certificates = [
 ]
 
 const tickerItems = [
-  'WEB DEVELOPMENT',
-  'CREATIVE PROBLEM SOLVING',
-  'FRONTEND ARCHITECTURE',
-  'ALWAYS LEARNING',
+  'REACT & TYPESCRIPT',
+  'NODE.JS · EXPRESS · PRISMA',
+  'POSTGRESQL · SUPABASE · FIREBASE',
+  'AWS CLOUD HOSTING',
+  'POWER BI DATA ANALYTICS',
+]
+
+const toolkit = [
+  'Node.js',
+  'Express',
+  'TypeScript',
+  'PostgreSQL',
+  'Prisma ORM',
+  'React',
+  'JavaScript',
+  'HTML & CSS',
+  'AWS',
+  'Supabase',
+  'Firebase',
+  'Power BI',
 ]
 
 function Arrow({ diagonal = false }) {
@@ -69,18 +85,19 @@ function App() {
       <main id="main">
         <section id="home" className="hero container">
           <div className="hero-copy">
-            <div className="eyebrow hero-anim hero-anim-1"><span className="eyebrow-line" /> PORTFOLIO / WEB DEVELOPER</div>
+            <div className="eyebrow hero-anim hero-anim-1"><span className="eyebrow-line" /> PORTFOLIO // FULL-STACK DEVELOPER</div>
             <h1 className="hero-anim hero-anim-2">Thoughtful<br />digital <em>experiences.</em></h1>
-            <p className="hero-intro hero-anim hero-anim-3">Hey, I’m <strong>Wesly Cunanan.</strong> A developer and computer science student who enjoys turning ideas into useful, approachable digital experiences.</p>
+            <p className="hero-intro hero-anim hero-anim-3">Hey, I’m <strong>Wesly Cunanan.</strong> A full-stack developer and computer science student building modern web applications with React, TypeScript, Node.js, and cloud infrastructure.</p>
             <div className="hero-actions hero-anim hero-anim-4"><a className="button button-primary" href="#work">Explore my work <Arrow /></a><a className="text-link" href={asset('certfolder/Wesly_Cunanan_CV.pdf')} target="_blank" rel="noopener noreferrer">View my CV <Arrow diagonal /></a></div>
-            <div className="hero-meta hero-anim hero-anim-5"><span>BASED IN</span><strong>Angeles City, Philippines</strong><span className="meta-divider" /><span>FOCUSED ON</span><strong>Web &amp; digital experiences</strong></div>
+            <div className="hero-meta hero-anim hero-anim-5"><span>BASED IN</span><strong>Angeles City, Philippines</strong><span className="meta-divider" /><span>STACK</span><strong>React · TypeScript · Node.js · PostgreSQL</strong></div>
           </div>
           <div className="hero-visual hero-anim hero-anim-visual" aria-label="Portrait of Wesly Cunanan">
             <div className="visual-grid" aria-hidden="true" />
             <div className="visual-glow" aria-hidden="true" />
+            <div className="visual-scanline" aria-hidden="true" />
             <span className="visual-top">SYS // PROFILE_01 <span>◈</span></span>
             <div className="portrait-circle"><img src={asset('cssfiles/images/2x2picture.png')} alt="Wesly Cunanan" /></div>
-            <div className="visual-bottom"><span>DEVELOPER<br />&amp; CREATIVE THINKER</span><span className="visual-symbol">◈</span></div>
+            <div className="visual-bottom"><span>FULL-STACK<br />&amp; CLOUD DEVELOPER</span><span className="visual-symbol">◈</span></div>
           </div>
           <a className="scroll-cue hero-anim hero-anim-5" href="#work"><span>SCROLL TO EXPLORE</span><span className="scroll-arrow" aria-hidden="true">↓</span></a>
         </section>
@@ -109,10 +126,10 @@ function App() {
           <a className="more-link reveal" href="https://github.com/Ohtomax" target="_blank" rel="noopener noreferrer">More on GitHub <Arrow diagonal /></a>
         </section>
 
-        <section id="about" className="about-section"><div className="container about-grid"><div className="reveal"><p className="eyebrow"><span className="eyebrow-line" /> THE PERSON BEHIND THE CODE / 02</p><h2>Curious by nature.<br /><em>Developer by choice.</em></h2></div><div className="about-copy reveal" style={{ '--delay': '120ms' }}><p className="about-lead">I’m a computer science student with a love for building things that work well and feel good to use.</p><p>Based in Angeles City, I’m constantly learning through coursework, personal projects, and hands-on experience. Outside of code, fitness and coaching have taught me the value of consistency, communication, and showing up ready to improve.</p><a className="text-link dark-link" href="#contact">Get to know me <Arrow /></a></div><div className="skills-block reveal" style={{ '--delay': '200ms' }}><span className="small-label">THE TOOLKIT</span><div className="skill-list">{['HTML & CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Node.js', 'Python', 'Java', 'SQL', 'Power BI'].map((skill, idx) => <span key={skill} style={{ '--skill-delay': `${idx * 45}ms` }}>{skill}</span>)}</div></div></div></section>
+        <section id="about" className="about-section"><div className="container about-grid"><div className="reveal"><p className="eyebrow"><span className="eyebrow-line" /> THE PERSON BEHIND THE CODE / 02</p><h2>Curious by nature.<br /><em>Developer by choice.</em></h2></div><div className="about-copy reveal" style={{ '--delay': '120ms' }}><p className="about-lead">I’m a computer science student with a love for building full-stack systems that work reliably and feel great to use.</p><p>Based in Angeles City, I build end-to-end applications using React, TypeScript, Node.js, Express, and PostgreSQL with Prisma ORM—backed by cloud platforms like AWS, Supabase, and Firebase, plus data analytics with Power BI.</p><a className="text-link dark-link" href="#contact">Get to know me <Arrow /></a></div><div className="skills-block reveal" style={{ '--delay': '200ms' }}><span className="small-label">THE TOOLKIT // TECH STACK</span><div className="skill-list">{toolkit.map((skill, idx) => <span key={skill} style={{ '--skill-delay': `${idx * 45}ms` }}>{skill}</span>)}</div></div></div></section>
 
         <section id="experience" className="section container"><div className="section-heading reveal"><div><p className="eyebrow"><span className="eyebrow-line" /> THE JOURNEY / 03</p><h2>Learning through<br /><em>doing.</em></h2></div><p>Every experience adds a new perspective to how I solve problems and work with people.</p></div>
-          <div className="experience-grid"><div className="reveal"><h3 className="column-heading">Education &amp; experience <span>↘</span></h3><div className="timeline-item"><span className="timeline-date">2023 — 2027</span><div><h4>BS Computer Science</h4><p>City College of Angeles</p><p>Building a foundation in development and analytical thinking through study and practical projects.</p></div></div><div className="timeline-item"><span className="timeline-date">JUN 2025 — JAN 2026</span><div><h4>Language Assessor</h4><p>GNGN Eikaiwa Philippines</p><p>Evaluated language skills and provided feedback to support students’ progress.</p></div></div></div><div className="reveal" style={{ '--delay': '140ms' }}><h3 className="column-heading">Certifications <span>↗</span></h3><div className="cert-list">{certificates.map(([title, issuer, path]) => <a key={path} href={asset(path)} target="_blank" rel="noopener noreferrer"><span><strong>{title}</strong><small>{issuer}</small></span><Arrow diagonal /></a>)}</div></div></div>
+          <div className="experience-grid"><div className="reveal"><h3 className="column-heading">Education &amp; experience <span>↘</span></h3><div className="timeline-item"><span className="timeline-date">2023 — 2027</span><div><h4>BS Computer Science</h4><p>City College of Angeles</p><p>Building a foundation in software engineering, full-stack web development, and analytical thinking through study and practical projects.</p></div></div><div className="timeline-item"><span className="timeline-date">JUN 2025 — JAN 2026</span><div><h4>Language Assessor</h4><p>GNGN Eikaiwa Philippines</p><p>Evaluated language skills and provided feedback to support students’ progress.</p></div></div></div><div className="reveal" style={{ '--delay': '140ms' }}><h3 className="column-heading">Certifications <span>↗</span></h3><div className="cert-list">{certificates.map(([title, issuer, path]) => <a key={path} href={asset(path)} target="_blank" rel="noopener noreferrer"><span><strong>{title}</strong><small>{issuer}</small></span><Arrow diagonal /></a>)}</div></div></div>
         </section>
 
         <section id="contact" className="contact-section"><div className="container reveal"><p className="eyebrow"><span className="eyebrow-line" /> HAVE AN IDEA? / 04</p><div className="contact-main"><h2>Let’s make<br /><em>something good.</em></h2><div><p>Have a project in mind or just want to connect? I’d love to hear from you.</p><a className="button button-light" href="mailto:omegawesly3@gmail.com">Get in touch <Arrow diagonal /></a></div></div><div className="contact-bottom"><a href="mailto:omegawesly3@gmail.com">omegawesly3@gmail.com</a><div><a href="https://github.com/Ohtomax" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.instagram.com/wygncn" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/weslygcunanan123" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div></div></section>
