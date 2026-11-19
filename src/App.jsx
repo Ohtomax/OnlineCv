@@ -61,12 +61,16 @@ const projects = [
 ]
 
 const certificates = [
-  ['CCNA: Enterprise Networking, Security & Automation', 'Cisco · 2026', 'certfolder/ciscocert.pdf'],
-  ['CCNA: Switching, Routing & Wireless Essentials', 'Cisco · 2026', 'certfolder/ciscocert.pdf'],
-  ['CCNAv7: Introduction to Networks', 'Cisco · 2025', 'certfolder/net1cert.pdf'],
+  ['CCNA: Enterprise Networking, Security & Automation', 'Cisco · 2026', 'certfolder/ccna_enterprise.pdf'],
+  ['CCNA: Switching, Routing & Wireless Essentials', 'Cisco · 2026', 'certfolder/ccna_switching.pdf'],
+  ['CCNAv7: Introduction to Networks', 'Cisco · 2025', 'certfolder/ccna_intro.pdf'],
   ['Cybersecurity Essentials: LFC108', 'The Linux Foundation · 2025', 'certfolder/cyberseccert.pdf'],
   ['Privacy by Design in Software Development', 'Servo · 2025', 'certfolder/dataprivacy.pdf'],
+  ['Participant: AI Hackathon', 'Cloudstaff · 2026', 'certfolder/cloudstaff_ai_hackathon.jpg'],
   ['IT Essentials: PC Hardware and Software', 'Cisco · 2024', 'certfolder/ciscocert.pdf'],
+  ['Introduction to Semiconductor Manufacturing', 'MCSM · 2026', 'certfolder/semiconductor_manufacturing.pdf'],
+  ['Semiconductor Materials Physics (Foundation)', 'MCSM · 2026', 'certfolder/semiconductor_physics.pdf'],
+  ['Industrial Electronics for Semiconductor', 'MCSM · 2026', 'certfolder/semiconductor_electronics.pdf'],
 ]
 
 const tickerItems = [
