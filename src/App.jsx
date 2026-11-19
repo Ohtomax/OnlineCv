@@ -4,45 +4,106 @@ import './cssfiles/portfolio.css'
 const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
 
 const projects = [
-  { number: '01', type: 'ANDROID DEVELOPMENT', title: 'FitJourneySync', description: 'An Android development project built with Java, bringing together my interests in fitness and technology.', tags: ['Java', 'Android'], url: 'https://github.com/Ohtomax/FITJOURNEYSYNCFINAL' },
-  { number: '02', type: 'FRONT-END DEVELOPMENT', title: 'Purrfectly Stitched', description: 'A school e-commerce project where I developed the customer-facing front end as part of a team.', tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'], url: 'https://github.com/TrustTheGuardian/Web-based-E-commerce-platform-for-Purrfectly-Stitched-' },
+  {
+    number: '01',
+    type: 'FULL-STACK / AI PLATFORM',
+    title: 'Smile Check',
+    subtitle: 'Dental Clinic Management System',
+    description: 'Modular PostgreSQL and Prisma ORM clinic platform featuring an NLP chatbot that automates patient reservations, schedule blocking, conflict resolution, and AES-256 encrypted EMR records.',
+    tags: ['React', 'TypeScript', 'Node.js', 'Prisma', 'PostgreSQL', 'NLP', 'Firebase'],
+    url: 'https://github.com/Ohtomax',
+  },
+  {
+    number: '02',
+    type: 'FULL-STACK ARCHITECTURE',
+    title: 'Gitfolio',
+    subtitle: 'Developer Platform',
+    description: 'Full-stack React, TypeScript, and Express platform built with Zustand, TanStack Query (autosaved editor with 50-step undo/redo), and an async BullMQ/Redis deployment pipeline to GitHub Pages.',
+    tags: ['React', 'TypeScript', 'Express', 'Zustand', 'TanStack Query', 'BullMQ', 'Redis', 'Prisma'],
+    url: 'https://github.com/Ohtomax',
+  },
+  {
+    number: '03',
+    type: 'FRONT-END DEVELOPMENT',
+    title: 'Purrfectly Stitched',
+    subtitle: 'E-Commerce Platform',
+    description: 'A comprehensive e-commerce platform engineered with modular Admin and User interfaces, real-time inventory management, Point of Sale (POS), and a custom CMS.',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+    url: 'https://github.com/TrustTheGuardian/Web-based-E-commerce-platform-for-Purrfectly-Stitched-',
+  },
+  {
+    number: '04',
+    type: 'CLIENT-SIDE APP',
+    title: 'Virtual Cooking Web App',
+    subtitle: 'Simulation Experience',
+    description: 'Client-side React and TypeScript cooking simulator with multi-stage interactive recipes and a zero-backend architecture utilizing in-browser SQLite (sql.js), Zustand, and Framer Motion.',
+    tags: ['React', 'TypeScript', 'Zustand', 'sql.js', 'Framer Motion'],
+    url: 'https://github.com/Ohtomax',
+  },
+  {
+    number: '05',
+    type: 'AUTOMATION & BACKEND',
+    title: 'DOST Web Scraper & Alert System',
+    subtitle: 'Automated Scraper',
+    description: 'Engineered an n8n workflow to continuously scrape time-sensitive DOST data and dynamically route location-based alerts via Discord, Telegram, and SMS chatbots.',
+    tags: ['n8n', 'Node.js', 'Web Scraping', 'Chatbots', 'REST APIs'],
+    url: 'https://github.com/Ohtomax',
+  },
+  {
+    number: '06',
+    type: 'MOBILE DEVELOPMENT',
+    title: 'FitJourneySync',
+    subtitle: 'Fitness & Nutrition Tracker',
+    description: 'Native Android application built in Java with full CRUD to manage daily macro tracking, calorie deficits, nutritional logs, and personal training metrics.',
+    tags: ['Java', 'Android Studio', 'Mobile CRUD'],
+    url: 'https://github.com/Ohtomax/FITJOURNEYSYNCFINAL',
+  },
 ]
 
 const certificates = [
-  ['IT Essentials: PC Hardware and Software', 'Cisco · 2024', 'certfolder/ciscocert.pdf'],
-  ['CCNAv7: Introduction to Networks', 'Cisco · 2024', 'certfolder/net1cert.pdf'],
+  ['CCNA: Enterprise Networking, Security & Automation', 'Cisco · 2026', 'certfolder/ciscocert.pdf'],
+  ['CCNA: Switching, Routing & Wireless Essentials', 'Cisco · 2026', 'certfolder/ciscocert.pdf'],
+  ['CCNAv7: Introduction to Networks', 'Cisco · 2025', 'certfolder/net1cert.pdf'],
+  ['Cybersecurity Essentials: LFC108', 'The Linux Foundation · 2025', 'certfolder/cyberseccert.pdf'],
   ['Privacy by Design in Software Development', 'Servo · 2025', 'certfolder/dataprivacy.pdf'],
-  ['Cybersecurity Essentials LFC108', 'The Linux Foundation · 2025', 'certfolder/cyberseccert.pdf'],
+  ['IT Essentials: PC Hardware and Software', 'Cisco · 2024', 'certfolder/ciscocert.pdf'],
 ]
 
 const tickerItems = [
   'REACT & TYPESCRIPT',
   'NODE.JS · EXPRESS · PRISMA',
-  'POSTGRESQL · SUPABASE · FIREBASE',
-  'AWS CLOUD HOSTING',
-  'POWER BI DATA ANALYTICS',
+  'POSTGRESQL · SUPABASE · REDIS',
+  'AWS CLOUD · DOCKER · N8N',
+  'FULL-STACK ARCHITECTURE',
+  'DEAN’S LISTER · CCA',
 ]
 
 const toolkit = [
-  'Node.js',
-  'Express',
   'TypeScript',
-  'PostgreSQL',
-  'Prisma ORM',
-  'React',
   'JavaScript',
-  'HTML & CSS',
-  'AWS',
+  'React',
+  'TanStack Query',
+  'Zustand',
+  'Node.js',
+  'Express.js',
+  'Prisma ORM',
+  'PostgreSQL',
   'Supabase',
+  'Redis',
+  'AWS',
   'Firebase',
+  'Docker',
+  'Postman',
+  'n8n',
+  'Tailwind CSS',
   'Power BI',
 ]
 
 const typedPhrases = [
-  'React & TypeScript Frontends',
-  'Node.js, Express & Prisma APIs',
-  'PostgreSQL, Supabase & Firebase',
-  'AWS Cloud & Power BI Analytics',
+  'React, TypeScript & Zustand Frontends',
+  'Node.js, Express & Prisma REST APIs',
+  'PostgreSQL, Supabase & Redis Databases',
+  'AWS Cloud, Docker & n8n Automation',
 ]
 
 function Arrow({ diagonal = false }) {
@@ -290,24 +351,100 @@ function App() {
           <div className="section-heading reveal"><div><p className="eyebrow"><span className="eyebrow-line" /> SELECTED WORK / 01</p><h2>A few things<br /><em>I’ve built.</em></h2></div><p>From mobile applications to the web, I enjoy building projects that make ideas tangible.</p></div>
           <div className="project-grid">{projects.map((project, index) => <article
             className="project-card reveal tilt-card"
-            style={{ '--delay': `${index * 140}ms` }}
+            style={{ '--delay': `${index * 120}ms` }}
             key={project.number}
             onMouseMove={handleCardTilt}
             onMouseLeave={resetCardTilt}
           >
-            <div className={`project-art project-art-${project.number}`} aria-hidden="true"><span className="art-index">{project.number} // SELECTED PROJECT</span>{project.number === '01' ? <div className="fitness-art"><span>FIT</span><span>JOURNEY</span><span>SYNC<span className="art-dot">.</span></span></div> : <div className="commerce-art"><span className="commerce-star">◈</span><span>purrfectly<br /><i>stitched.</i></span></div>}<span className="art-bottom">DESIGNED TO MAKE AN IDEA REAL <span>↗</span></span></div>
-            <div className="project-info"><div className="project-meta">{project.type} <span>{project.number} / 02</span></div><h3>{project.title}</h3><p>{project.description}</p><div className="project-footer"><div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`}>VIEW PROJECT <Arrow diagonal /></a></div></div>
+            <div className={`project-art project-art-${project.number}`} aria-hidden="true">
+              <span className="art-index">{project.number} // SELECTED PROJECT</span>
+              {project.number === '01' ? (
+                <div className="fitness-art"><span>SMILE</span><span>CHECK<span className="art-dot">.</span></span></div>
+              ) : project.number === '02' ? (
+                <div className="fitness-art"><span>GIT</span><span>FOLIO<span className="art-dot">.</span></span></div>
+              ) : project.number === '03' ? (
+                <div className="commerce-art"><span className="commerce-star">◈</span><span>purrfectly<br /><i>stitched.</i></span></div>
+              ) : project.number === '04' ? (
+                <div className="fitness-art"><span>VIRTUAL</span><span>COOKING<span className="art-dot">.</span></span></div>
+              ) : project.number === '05' ? (
+                <div className="fitness-art"><span>DOST</span><span>SCRAPER<span className="art-dot">.</span></span></div>
+              ) : (
+                <div className="fitness-art"><span>FIT</span><span>TRACKER<span className="art-dot">.</span></span></div>
+              )}
+              <span className="art-bottom">DESIGNED TO MAKE AN IDEA REAL <span>↗</span></span>
+            </div>
+            <div className="project-info">
+              <div className="project-meta">{project.type} <span>{project.number} / 06</span></div>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="project-footer">
+                <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+                <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`}>VIEW PROJECT <Arrow diagonal /></a>
+              </div>
+            </div>
           </article>)}</div>
           <a className="more-link reveal" href="https://github.com/Ohtomax" target="_blank" rel="noopener noreferrer">More on GitHub <Arrow diagonal /></a>
         </section>
 
-        <section id="about" className="about-section"><div className="container about-grid"><div className="reveal"><p className="eyebrow"><span className="eyebrow-line" /> THE PERSON BEHIND THE CODE / 02</p><h2>Curious by nature.<br /><em>Developer by choice.</em></h2></div><div className="about-copy reveal" style={{ '--delay': '120ms' }}><p className="about-lead">I’m a computer science student with a love for building full-stack systems that work reliably and feel great to use.</p><p>Based in Angeles City, I build end-to-end applications using React, TypeScript, Node.js, Express, and PostgreSQL with Prisma ORM—backed by cloud platforms like AWS, Supabase, and Firebase, plus data analytics with Power BI.</p><a className="text-link dark-link" href="#contact">Get to know me <Arrow /></a></div><div className="skills-block reveal" style={{ '--delay': '200ms' }}><span className="small-label">THE TOOLKIT // TECH STACK</span><div className="skill-list">{toolkit.map((skill, idx) => <span key={skill} style={{ '--skill-delay': `${idx * 55}ms` }}>{skill}</span>)}</div></div></div></section>
+        <section id="about" className="about-section"><div className="container about-grid"><div className="reveal"><p className="eyebrow"><span className="eyebrow-line" /> THE PERSON BEHIND THE CODE / 02</p><h2>Curious by nature.<br /><em>Developer by choice.</em></h2></div><div className="about-copy reveal" style={{ '--delay': '120ms' }}><p className="about-lead">I’m a computer science student with a love for building full-stack systems that work reliably and feel great to use.</p><p>Based in Angeles City, I build end-to-end applications using React, TypeScript, Node.js, Express, and PostgreSQL with Prisma ORM—backed by cloud platforms like AWS, Supabase, and Firebase, Docker containerization, and n8n workflow automation.</p><a className="text-link dark-link" href="#contact">Get to know me <Arrow /></a></div><div className="skills-block reveal" style={{ '--delay': '200ms' }}><span className="small-label">THE TOOLKIT // TECH STACK</span><div className="skill-list">{toolkit.map((skill, idx) => <span key={skill} style={{ '--skill-delay': `${idx * 45}ms` }}>{skill}</span>)}</div></div></div></section>
 
         <section id="experience" className="section container"><div className="section-heading reveal"><div><p className="eyebrow"><span className="eyebrow-line" /> THE JOURNEY / 03</p><h2>Learning through<br /><em>doing.</em></h2></div><p>Every experience adds a new perspective to how I solve problems and work with people.</p></div>
-          <div className="experience-grid"><div className="reveal"><h3 className="column-heading">Education &amp; experience <span>↘</span></h3><div className="timeline-item"><span className="timeline-date">2023 — 2027</span><div><h4>BS Computer Science</h4><p>City College of Angeles</p><p>Building a foundation in software engineering, full-stack web development, and analytical thinking through study and practical projects.</p></div></div><div className="timeline-item"><span className="timeline-date">JUN 2025 — JAN 2026</span><div><h4>Language Assessor</h4><p>GNGN Eikaiwa Philippines</p><p>Evaluated language skills and provided feedback to support students’ progress.</p></div></div></div><div className="reveal" style={{ '--delay': '140ms' }}><h3 className="column-heading">Certifications <span>↗</span></h3><div className="cert-list">{certificates.map(([title, issuer, path]) => <a key={path} href={asset(path)} target="_blank" rel="noopener noreferrer"><span><strong>{title}</strong><small>{issuer}</small></span><Arrow diagonal /></a>)}</div></div></div>
+          <div className="experience-grid">
+            <div className="reveal">
+              <h3 className="column-heading">Education &amp; experience <span>↘</span></h3>
+              <div className="timeline-item">
+                <span className="timeline-date">2023 — PRESENT</span>
+                <div>
+                  <h4>BS Computer Science — Dean's Lister</h4>
+                  <p>City College of Angeles · Angeles City, Pampanga</p>
+                  <p>Building a solid foundation in software engineering, full-stack web architectures, distributed systems, and analytical problem-solving.</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <span className="timeline-date">1 YEAR</span>
+                <div>
+                  <h4>Freelance Web Development</h4>
+                  <p>Freelance &amp; Client Projects</p>
+                  <p>Engineered responsive web applications, secure REST APIs, custom CMS platforms, and automated workflow pipelines.</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <span className="timeline-date">ACHIEVEMENTS</span>
+                <div>
+                  <h4>1st Place — Capture the Flag (CTF)</h4>
+                  <p>Software Freedom Day at CCA (2023)</p>
+                  <p>Participant, AI Hackathon — Cloudstaff (2026).</p>
+                </div>
+              </div>
+            </div>
+            <div className="reveal" style={{ '--delay': '140ms' }}>
+              <h3 className="column-heading">Certifications <span>↗</span></h3>
+              <div className="cert-list">{certificates.map(([title, issuer, path]) => <a key={`${title}-${path}`} href={asset(path)} target="_blank" rel="noopener noreferrer"><span><strong>{title}</strong><small>{issuer}</small></span><Arrow diagonal /></a>)}</div>
+            </div>
+          </div>
         </section>
 
-        <section id="contact" className="contact-section"><div className="container reveal"><p className="eyebrow"><span className="eyebrow-line" /> HAVE AN IDEA? / 04</p><div className="contact-main"><h2>Let’s make<br /><em>something good.</em></h2><div><p>Have a project in mind or just want to connect? I’d love to hear from you.</p><a className="button button-light" href="mailto:omegawesly3@gmail.com">Get in touch <Arrow diagonal /></a></div></div><div className="contact-bottom"><a href="mailto:omegawesly3@gmail.com">omegawesly3@gmail.com</a><div><a href="https://github.com/Ohtomax" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.instagram.com/wygncn" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/weslygcunanan123" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div></div></section>
+        <section id="contact" className="contact-section">
+          <div className="container reveal">
+            <p className="eyebrow"><span className="eyebrow-line" /> HAVE AN IDEA? / 04</p>
+            <div className="contact-main">
+              <h2>Let’s make<br /><em>something good.</em></h2>
+              <div>
+                <p>Have a project in mind, open roles, or just want to connect? I’d love to hear from you.</p>
+                <a className="button button-light" href="mailto:weslycunanan12304@gmail.com">Get in touch <Arrow diagonal /></a>
+              </div>
+            </div>
+            <div className="contact-bottom">
+              <a href="mailto:weslycunanan12304@gmail.com">weslycunanan12304@gmail.com</a>
+              <div>
+                <a href="https://github.com/Ohtomax" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                <a href="https://ph.jobstreet.com/profiles/wesly-cunanan-vNP8g3rxJY" target="_blank" rel="noopener noreferrer">JobStreet ↗</a>
+                <a href="https://www.instagram.com/wygncn" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                <a href="https://www.facebook.com/weslygcunanan123" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer><div className="container footer-inner"><span>© {new Date().getFullYear()} WESLY CUNANAN</span><span>MADE WITH CURIOSITY &amp; CARE</span><a href="#home">BACK TO TOP ↑</a></div></footer>
     </>
