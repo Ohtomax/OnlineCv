@@ -11,7 +11,7 @@ const projects = [
     subtitle: 'Dental Clinic Management System',
     description: 'Modular PostgreSQL and Prisma ORM clinic platform featuring an NLP chatbot that automates patient reservations, schedule blocking, conflict resolution, and AES-256 encrypted EMR records.',
     tags: ['React', 'TypeScript', 'Node.js', 'Prisma', 'PostgreSQL', 'NLP', 'Firebase'],
-    url: 'https://github.com/Ohtomax',
+    url: 'https://smile-check-system-rouge.vercel.app',
   },
   {
     number: '02',
@@ -20,7 +20,7 @@ const projects = [
     subtitle: 'Developer Platform',
     description: 'Full-stack React, TypeScript, and Express platform built with Zustand, TanStack Query (autosaved editor with 50-step undo/redo), and an async BullMQ/Redis deployment pipeline to GitHub Pages.',
     tags: ['React', 'TypeScript', 'Express', 'Zustand', 'TanStack Query', 'BullMQ', 'Redis', 'Prisma'],
-    url: 'https://github.com/Ohtomax',
+    url: 'https://git-folio-nine.vercel.app',
   },
   {
     number: '03',
@@ -38,7 +38,7 @@ const projects = [
     subtitle: 'Simulation Experience',
     description: 'Client-side React and TypeScript cooking simulator with multi-stage interactive recipes and a zero-backend architecture utilizing in-browser SQLite (sql.js), Zustand, and Framer Motion.',
     tags: ['React', 'TypeScript', 'Zustand', 'sql.js', 'Framer Motion'],
-    url: 'https://github.com/Ohtomax',
+    url: 'https://virtual-cooking-web-app-two.vercel.app',
   },
   {
     number: '05',
@@ -388,7 +388,7 @@ function App() {
               <p>{project.description}</p>
               <div className="project-footer">
                 <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`}>VIEW PROJECT <Arrow diagonal /></a>
+                <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title}`}>VIEW PROJECT <Arrow diagonal /></a>
               </div>
             </div>
           </article>)}</div>
