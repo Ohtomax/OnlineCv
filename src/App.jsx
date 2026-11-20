@@ -295,7 +295,12 @@ function App() {
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
         <div className="container nav-wrap">
-          <a className="brand" href="#home" aria-label="Wesly Cunanan, home"><span className="brand-mark">W<span>.</span></span><span>WESLY CUNANAN</span></a>
+          <a className="brand" href="#home" aria-label="Wesly Cunanan, home">
+            <span className="brand-mark">
+              <img src={asset('cssfiles/images/2x2picture.png')} alt="Wesly Cunanan" className="brand-photo" />
+            </span>
+            <span>WESLY CUNANAN</span>
+          </a>
           <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close' : 'Menu'} <span aria-hidden="true">{menuOpen ? '×' : '☰'}</span></button>
           <nav id="main-navigation" className={menuOpen ? 'navigation is-open' : 'navigation'} aria-label="Main navigation">
             {[['Work', '#work'], ['About', '#about'], ['Experience', '#experience']].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
