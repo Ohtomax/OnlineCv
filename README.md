@@ -32,12 +32,12 @@ I specialize in the **PERN stack** (PostgreSQL, Express, React, Node.js) with a 
 *   **Purrfectly Stitched**
     A full-stack e-commerce platform equipped with custom inventory management and reporting tools.
 *   **Interactive Online CV**
-    My digital résumé built with modern web technologies, featuring an integrated Dify-powered chatbot to interact directly with technical recruiters.
+    My digital résumé built with modern web technologies, showcasing full-stack projects, verified certifications, and interactive experience workflows.
 
 ---
 
 ## 🌐 Live Demo & Links
-🔗 [View My Online CV](https://ohtomax.github.io/OnlineCv/)
+🔗 [View My Online CV](https://weslycunanan.me/)
 
 ---
 
